@@ -1,0 +1,18 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="AlphaModder.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="GameFolder" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Not found</Value>
+    </Setting>
+    <Setting Name="AlphaFilePath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Not found</Value>
+    </Setting>
+    <Setting Name="AlphaXFilePath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Not found</Value>
+    </Setting>
+    <Setting Name="AlphaCentauriIniPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Not found</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
