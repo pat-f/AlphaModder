@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Constants\AlphaModderConstants.cs" />
+    <Compile Include="Constants\Sounds.cs" />
     <Compile Include="Constants\Techs.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
