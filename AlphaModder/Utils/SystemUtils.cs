@@ -95,5 +95,22 @@ namespace AlphaModder.Utils
             }
 
         }
+
+        // play the specified sound
+        public static void playSound(String relativePath)
+        {
+            String absolutePath = Properties.Settings.Default.GameFolder + relativePath;
+            System.Media.SoundPlayer soundPlayer = new System.Media.SoundPlayer(absolutePath);
+            soundPlayer.Play();
+        }
+
+        // play a random sound from the provided list
+        public static void playRandomSound(List<String> relativePathList)
+        {
+            Random random = new Random();
+            int r = random.Next(relativePathList.Count);
+            String absolutePath = Properties.Settings.Default.GameFolder + relativePathList[r];
+            playSound(absolutePath);
+        }
     }
 }
