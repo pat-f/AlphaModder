@@ -29,9 +29,8 @@ namespace AlphaModder
                 || !SystemUtils.verifyGameFolder(Properties.Settings.Default.GameFolder)
                 )
                 if(!SystemUtils.findGameFolder())
-                    MessageBox.Show("No game installation folder was found. Please configure it in the Tools menu.");
+                    MessageBox.Show("No game installation folder was found. Please configure it in the Tools menu or put the Alpha Modder executable in the game installation folder.");
             
-
             labelGameFolder.Text = Properties.Settings.Default.GameFolder;
             if(String.Equals(labelGameFolder.Text, "Not found"))
                 labelGameFolder.ForeColor = Color.Red;
@@ -77,11 +76,10 @@ namespace AlphaModder
             { ((HandledMouseEventArgs)e).Handled = true; });
         }
 
-
         private void ButtonSave_Click(object sender, EventArgs e)
         {
             String applyMessage = "alpha.txt and alphax.txt will be overwritten with the selected settings.";
-            DialogResult dialogResult = MessageBox.Show(applyMessage, "Set Game Resolution", MessageBoxButtons.OKCancel);
+            DialogResult dialogResult = MessageBox.Show(applyMessage, "Apply Modifications", MessageBoxButtons.OKCancel);
             if (dialogResult == DialogResult.Cancel)
             {
                 return;
@@ -812,7 +810,7 @@ namespace AlphaModder
             DialogResult dialogResult = MessageBox.Show(setResMessage, "Set Game Resolution", MessageBoxButtons.OKCancel);
             if (dialogResult == DialogResult.OK)
             {
-                DataUtils.setResolution(highRes); // set to high resolution
+                DataUtils.setResolution(highRes); // set the resolution - true = high res, false = low res
             }
         }
 
