@@ -8,7 +8,7 @@ namespace AlphaModder.Constants
 {
     class AlphaModderConstants
     {
-        public const String VERSION = "1.0.0";
+        public const String VERSION = "1.1.0-beta";
 
         public const String DIRECTDRAW_1_LOW_RES_LINE = "DirectDraw=1";
         public const String DIRECTDRAW_0_HIGH_RES_LINE = "DirectDraw=0";

@@ -40,12 +40,12 @@
             this.saveAlphaxtxtAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openGameFolderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.hurryCostCalculatorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gameResolutionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.highResolutionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lowResolutionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.searchForGameInstallationFolderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.setGameInstallationFolderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.hurryCostCalculatorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.trackBarTerraformingRate = new System.Windows.Forms.TrackBar();
             this.labelTerraformingSpeed = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -188,13 +188,39 @@
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabPageGeneral = new System.Windows.Forms.TabPage();
             this.tabPageOther = new System.Windows.Forms.TabPage();
+            this.label73 = new System.Windows.Forms.Label();
             this.label55 = new System.Windows.Forms.Label();
             this.numTurnsBetweenCouncils = new System.Windows.Forms.NumericUpDown();
             this.checkBoxUnlockReactors = new System.Windows.Forms.CheckBox();
-            this.tabPageFacilities = new System.Windows.Forms.TabPage();
             this.tabPageUnits = new System.Windows.Forms.TabPage();
-            this.checkBoxDisableTroopTransport = new System.Windows.Forms.CheckBox();
-            this.checkBoxFreeInfantry = new System.Windows.Forms.CheckBox();
+            this.label71 = new System.Windows.Forms.Label();
+            this.checkBoxEnableHeavyTransport = new System.Windows.Forms.CheckBox();
+            this.label70 = new System.Windows.Forms.Label();
+            this.label68 = new System.Windows.Forms.Label();
+            this.label69 = new System.Windows.Forms.Label();
+            this.numericFusionReactorPower = new System.Windows.Forms.NumericUpDown();
+            this.numericQuantumChamberPower = new System.Windows.Forms.NumericUpDown();
+            this.numericSingularityEnginePower = new System.Windows.Forms.NumericUpDown();
+            this.label67 = new System.Windows.Forms.Label();
+            this.numericFissionPlantPower = new System.Windows.Forms.NumericUpDown();
+            this.label60 = new System.Windows.Forms.Label();
+            this.label61 = new System.Windows.Forms.Label();
+            this.label62 = new System.Windows.Forms.Label();
+            this.checkBoxUnlockQuantumChamber = new System.Windows.Forms.CheckBox();
+            this.checkBoxDisableQuantumChamber = new System.Windows.Forms.CheckBox();
+            this.label63 = new System.Windows.Forms.Label();
+            this.checkBoxUnlockSingularityEngine = new System.Windows.Forms.CheckBox();
+            this.checkBoxDisableSingularityEngine = new System.Windows.Forms.CheckBox();
+            this.label64 = new System.Windows.Forms.Label();
+            this.label65 = new System.Windows.Forms.Label();
+            this.checkBoxDisableFissionPlant = new System.Windows.Forms.CheckBox();
+            this.checkBoxFreeFusionReactor = new System.Windows.Forms.CheckBox();
+            this.checkBoxFreeFissionPlant = new System.Windows.Forms.CheckBox();
+            this.checkBoxFreeSingularityEngine = new System.Windows.Forms.CheckBox();
+            this.checkBoxFreeQuantumChamber = new System.Windows.Forms.CheckBox();
+            this.checkBoxUnlockFusionReactor = new System.Windows.Forms.CheckBox();
+            this.label66 = new System.Windows.Forms.Label();
+            this.checkBoxDisableFusionReactor = new System.Windows.Forms.CheckBox();
             this.label57 = new System.Windows.Forms.Label();
             this.label58 = new System.Windows.Forms.Label();
             this.label59 = new System.Windows.Forms.Label();
@@ -246,36 +272,10 @@
             this.checkBoxUnlockRepairBay = new System.Windows.Forms.CheckBox();
             this.checkBoxDisableNerveGasPods = new System.Windows.Forms.CheckBox();
             this.label37 = new System.Windows.Forms.Label();
-            this.numericFusionReactorPower = new System.Windows.Forms.NumericUpDown();
-            this.numericQuantumChamberPower = new System.Windows.Forms.NumericUpDown();
-            this.numericSingularityEnginePower = new System.Windows.Forms.NumericUpDown();
-            this.label67 = new System.Windows.Forms.Label();
-            this.numericFissionPlantPower = new System.Windows.Forms.NumericUpDown();
-            this.label60 = new System.Windows.Forms.Label();
-            this.label61 = new System.Windows.Forms.Label();
-            this.label62 = new System.Windows.Forms.Label();
-            this.checkBoxUnlockQuantumChamber = new System.Windows.Forms.CheckBox();
-            this.checkBoxDisableQuantumChamber = new System.Windows.Forms.CheckBox();
-            this.label63 = new System.Windows.Forms.Label();
-            this.checkBoxUnlockSingularityEngine = new System.Windows.Forms.CheckBox();
-            this.checkBoxDisableSingularityEngine = new System.Windows.Forms.CheckBox();
-            this.label64 = new System.Windows.Forms.Label();
-            this.label65 = new System.Windows.Forms.Label();
-            this.checkBoxDisableFissionPlant = new System.Windows.Forms.CheckBox();
-            this.checkBoxFreeFusionReactor = new System.Windows.Forms.CheckBox();
-            this.checkBoxFreeFissionPlant = new System.Windows.Forms.CheckBox();
-            this.checkBoxFreeSingularityEngine = new System.Windows.Forms.CheckBox();
-            this.checkBoxFreeQuantumChamber = new System.Windows.Forms.CheckBox();
-            this.checkBoxUnlockFusionReactor = new System.Windows.Forms.CheckBox();
-            this.label66 = new System.Windows.Forms.Label();
-            this.checkBoxDisableFusionReactor = new System.Windows.Forms.CheckBox();
-            this.label69 = new System.Windows.Forms.Label();
-            this.label68 = new System.Windows.Forms.Label();
-            this.label70 = new System.Windows.Forms.Label();
-            this.checkBoxEnableHeavyTransport = new System.Windows.Forms.CheckBox();
-            this.label71 = new System.Windows.Forms.Label();
+            this.checkBoxDisableTroopTransport = new System.Windows.Forms.CheckBox();
+            this.checkBoxFreeInfantry = new System.Windows.Forms.CheckBox();
+            this.tabPageFacilities = new System.Windows.Forms.TabPage();
             this.label72 = new System.Windows.Forms.Label();
-            this.label73 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarTerraformingRate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarDroneRiots)).BeginInit();
@@ -288,12 +288,12 @@
             this.tabPageGeneral.SuspendLayout();
             this.tabPageOther.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numTurnsBetweenCouncils)).BeginInit();
-            this.tabPageFacilities.SuspendLayout();
             this.tabPageUnits.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericFusionReactorPower)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericQuantumChamberPower)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericSingularityEnginePower)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericFissionPlantPower)).BeginInit();
+            this.tabPageFacilities.SuspendLayout();
             this.SuspendLayout();
             // 
             // checkBoxDisableProbeTeams
@@ -412,6 +412,13 @@
             this.toolsToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
             this.toolsToolStripMenuItem.Text = "Tools";
             // 
+            // hurryCostCalculatorToolStripMenuItem
+            // 
+            this.hurryCostCalculatorToolStripMenuItem.Name = "hurryCostCalculatorToolStripMenuItem";
+            this.hurryCostCalculatorToolStripMenuItem.Size = new System.Drawing.Size(255, 22);
+            this.hurryCostCalculatorToolStripMenuItem.Text = "Hurry Cost Calculator";
+            this.hurryCostCalculatorToolStripMenuItem.Click += new System.EventHandler(this.HurryCostCalculatorToolStripMenuItem_Click);
+            // 
             // gameResolutionToolStripMenuItem
             // 
             this.gameResolutionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -448,13 +455,6 @@
             this.setGameInstallationFolderToolStripMenuItem.Size = new System.Drawing.Size(255, 22);
             this.setGameInstallationFolderToolStripMenuItem.Text = "Set game installation folder...";
             this.setGameInstallationFolderToolStripMenuItem.Click += new System.EventHandler(this.SetGameInstallationFolderToolStripMenuItem_Click);
-            // 
-            // hurryCostCalculatorToolStripMenuItem
-            // 
-            this.hurryCostCalculatorToolStripMenuItem.Name = "hurryCostCalculatorToolStripMenuItem";
-            this.hurryCostCalculatorToolStripMenuItem.Size = new System.Drawing.Size(255, 22);
-            this.hurryCostCalculatorToolStripMenuItem.Text = "Hurry Cost Calculator";
-            this.hurryCostCalculatorToolStripMenuItem.Click += new System.EventHandler(this.HurryCostCalculatorToolStripMenuItem_Click);
             // 
             // trackBarTerraformingRate
             // 
@@ -1789,7 +1789,7 @@
             this.tabControl.Location = new System.Drawing.Point(12, 104);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
-            this.tabControl.Size = new System.Drawing.Size(1210, 544);
+            this.tabControl.Size = new System.Drawing.Size(1210, 642);
             this.tabControl.TabIndex = 223;
             // 
             // tabPageGeneral
@@ -1819,7 +1819,7 @@
             this.tabPageGeneral.Location = new System.Drawing.Point(4, 30);
             this.tabPageGeneral.Name = "tabPageGeneral";
             this.tabPageGeneral.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageGeneral.Size = new System.Drawing.Size(1202, 510);
+            this.tabPageGeneral.Size = new System.Drawing.Size(1202, 608);
             this.tabPageGeneral.TabIndex = 0;
             this.tabPageGeneral.Text = "General";
             this.tabPageGeneral.UseVisualStyleBackColor = true;
@@ -1836,10 +1836,21 @@
             this.tabPageOther.Location = new System.Drawing.Point(4, 30);
             this.tabPageOther.Name = "tabPageOther";
             this.tabPageOther.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageOther.Size = new System.Drawing.Size(1202, 510);
+            this.tabPageOther.Size = new System.Drawing.Size(1202, 608);
             this.tabPageOther.TabIndex = 4;
             this.tabPageOther.Text = "Other   ";
             this.tabPageOther.UseVisualStyleBackColor = true;
+            // 
+            // label73
+            // 
+            this.label73.AutoSize = true;
+            this.label73.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label73.Location = new System.Drawing.Point(32, 23);
+            this.label73.Name = "label73";
+            this.label73.Size = new System.Drawing.Size(621, 38);
+            this.label73.TabIndex = 305;
+            this.label73.Text = "Unchecked boxes will not interfere with options selected in General.\r\nChecked box" +
+    "es will take precedence over options selected in General.";
             // 
             // label55
             // 
@@ -1881,72 +1892,6 @@
             this.checkBoxUnlockReactors.Text = "Unlock all reactors";
             this.checkBoxUnlockReactors.UseVisualStyleBackColor = true;
             this.checkBoxUnlockReactors.Visible = false;
-            // 
-            // tabPageFacilities
-            // 
-            this.tabPageFacilities.Controls.Add(this.label72);
-            this.tabPageFacilities.Controls.Add(this.label51);
-            this.tabPageFacilities.Controls.Add(this.label50);
-            this.tabPageFacilities.Controls.Add(this.checkBoxUnlockPsiGate);
-            this.tabPageFacilities.Controls.Add(this.checkBoxFreeRecreationCommons);
-            this.tabPageFacilities.Controls.Add(this.checkBoxDisablePsiGate);
-            this.tabPageFacilities.Controls.Add(this.checkBoxUnlockRecreationCommons);
-            this.tabPageFacilities.Controls.Add(this.label49);
-            this.tabPageFacilities.Controls.Add(this.checkBoxUnlockSkunkworks);
-            this.tabPageFacilities.Controls.Add(this.checkBoxDisableSkunkworks);
-            this.tabPageFacilities.Controls.Add(this.label48);
-            this.tabPageFacilities.Controls.Add(this.checkBoxFreeNessusMiningStation);
-            this.tabPageFacilities.Controls.Add(this.checkBoxUnlockHabComplex);
-            this.tabPageFacilities.Controls.Add(this.checkBoxFreeOrbitalPowerTransmitter);
-            this.tabPageFacilities.Controls.Add(this.checkBoxDisableHabComplex);
-            this.tabPageFacilities.Controls.Add(this.checkBoxFreeSkyHydroponicsLab);
-            this.tabPageFacilities.Controls.Add(this.label47);
-            this.tabPageFacilities.Controls.Add(this.checkBoxFreeOrbitalDefensePod);
-            this.tabPageFacilities.Controls.Add(this.checkBoxUnlockPressureDome);
-            this.tabPageFacilities.Controls.Add(this.label43);
-            this.tabPageFacilities.Controls.Add(this.checkBoxDisablePressureDome);
-            this.tabPageFacilities.Controls.Add(this.checkBoxDisableNessusMiningStation);
-            this.tabPageFacilities.Controls.Add(this.label46);
-            this.tabPageFacilities.Controls.Add(this.checkBoxUnlockNessusMiningStation);
-            this.tabPageFacilities.Controls.Add(this.checkBoxDisableRecreationCommons);
-            this.tabPageFacilities.Controls.Add(this.label52);
-            this.tabPageFacilities.Controls.Add(this.label45);
-            this.tabPageFacilities.Controls.Add(this.checkBoxDisableOrbitalPowerTransmitter);
-            this.tabPageFacilities.Controls.Add(this.checkBoxUnlockHologramTheatre);
-            this.tabPageFacilities.Controls.Add(this.checkBoxUnlockOrbitalPowerTransmitter);
-            this.tabPageFacilities.Controls.Add(this.checkBoxDisableHologramTheatre);
-            this.tabPageFacilities.Controls.Add(this.label53);
-            this.tabPageFacilities.Controls.Add(this.label44);
-            this.tabPageFacilities.Controls.Add(this.checkBoxDisableSkyHydroponicsLab);
-            this.tabPageFacilities.Controls.Add(this.checkBoxUnlockParadiseGarden);
-            this.tabPageFacilities.Controls.Add(this.checkBoxUnlockSkyHydroponicsLab);
-            this.tabPageFacilities.Controls.Add(this.checkBoxDisableParadiseGarden);
-            this.tabPageFacilities.Controls.Add(this.label54);
-            this.tabPageFacilities.Controls.Add(this.label42);
-            this.tabPageFacilities.Controls.Add(this.checkBoxDisableOrbitalDefensePod);
-            this.tabPageFacilities.Controls.Add(this.checkBoxUnlockPunishmentSphere);
-            this.tabPageFacilities.Controls.Add(this.checkBoxUnlockOrbitalDefensePod);
-            this.tabPageFacilities.Controls.Add(this.checkBoxDisablePunishmentSphere);
-            this.tabPageFacilities.Controls.Add(this.checkBoxFreeHabitationDome);
-            this.tabPageFacilities.Controls.Add(this.label41);
-            this.tabPageFacilities.Controls.Add(this.checkBoxFreePunishmentSphere);
-            this.tabPageFacilities.Controls.Add(this.checkBoxUnlockHabitationDome);
-            this.tabPageFacilities.Controls.Add(this.checkBoxFreeParadiseGarden);
-            this.tabPageFacilities.Controls.Add(this.checkBoxDisableHabitationDome);
-            this.tabPageFacilities.Controls.Add(this.checkBoxFreeHologramTheatre);
-            this.tabPageFacilities.Controls.Add(this.label40);
-            this.tabPageFacilities.Controls.Add(this.checkBoxFreePressureDome);
-            this.tabPageFacilities.Controls.Add(this.label39);
-            this.tabPageFacilities.Controls.Add(this.checkBoxFreeHabComplex);
-            this.tabPageFacilities.Controls.Add(this.checkBoxFreePsiGate);
-            this.tabPageFacilities.Controls.Add(this.checkBoxFreeSkunkworks);
-            this.tabPageFacilities.Location = new System.Drawing.Point(4, 30);
-            this.tabPageFacilities.Name = "tabPageFacilities";
-            this.tabPageFacilities.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageFacilities.Size = new System.Drawing.Size(1202, 510);
-            this.tabPageFacilities.TabIndex = 1;
-            this.tabPageFacilities.Text = "Facilities";
-            this.tabPageFacilities.UseVisualStyleBackColor = true;
             // 
             // tabPageUnits
             // 
@@ -2098,28 +2043,317 @@
             this.tabPageUnits.Location = new System.Drawing.Point(4, 30);
             this.tabPageUnits.Name = "tabPageUnits";
             this.tabPageUnits.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageUnits.Size = new System.Drawing.Size(1202, 510);
+            this.tabPageUnits.Size = new System.Drawing.Size(1202, 608);
             this.tabPageUnits.TabIndex = 2;
             this.tabPageUnits.Text = "Units";
             this.tabPageUnits.UseVisualStyleBackColor = true;
             // 
-            // checkBoxDisableTroopTransport
+            // label71
             // 
-            this.checkBoxDisableTroopTransport.AutoSize = true;
-            this.checkBoxDisableTroopTransport.Location = new System.Drawing.Point(129, 391);
-            this.checkBoxDisableTroopTransport.Name = "checkBoxDisableTroopTransport";
-            this.checkBoxDisableTroopTransport.Size = new System.Drawing.Size(15, 14);
-            this.checkBoxDisableTroopTransport.TabIndex = 223;
-            this.checkBoxDisableTroopTransport.UseVisualStyleBackColor = true;
+            this.label71.AutoSize = true;
+            this.label71.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label71.Location = new System.Drawing.Point(35, 23);
+            this.label71.Name = "label71";
+            this.label71.Size = new System.Drawing.Size(621, 38);
+            this.label71.TabIndex = 303;
+            this.label71.Text = "Unchecked boxes will not interfere with options selected in General.\r\nChecked box" +
+    "es will take precedence over options selected in General.";
             // 
-            // checkBoxFreeInfantry
+            // checkBoxEnableHeavyTransport
             // 
-            this.checkBoxFreeInfantry.AutoSize = true;
-            this.checkBoxFreeInfantry.Location = new System.Drawing.Point(91, 137);
-            this.checkBoxFreeInfantry.Name = "checkBoxFreeInfantry";
-            this.checkBoxFreeInfantry.Size = new System.Drawing.Size(15, 14);
-            this.checkBoxFreeInfantry.TabIndex = 222;
-            this.checkBoxFreeInfantry.UseVisualStyleBackColor = true;
+            this.checkBoxEnableHeavyTransport.AutoSize = true;
+            this.checkBoxEnableHeavyTransport.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxEnableHeavyTransport.Location = new System.Drawing.Point(427, 392);
+            this.checkBoxEnableHeavyTransport.Name = "checkBoxEnableHeavyTransport";
+            this.checkBoxEnableHeavyTransport.Size = new System.Drawing.Size(370, 23);
+            this.checkBoxEnableHeavyTransport.TabIndex = 302;
+            this.checkBoxEnableHeavyTransport.Text = "Enable Heavy Transport special ability";
+            this.checkBoxEnableHeavyTransport.UseVisualStyleBackColor = true;
+            // 
+            // label70
+            // 
+            this.label70.AutoSize = true;
+            this.label70.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label70.Location = new System.Drawing.Point(419, 81);
+            this.label70.Name = "label70";
+            this.label70.Size = new System.Drawing.Size(66, 20);
+            this.label70.TabIndex = 301;
+            this.label70.Text = "Abilities";
+            // 
+            // label68
+            // 
+            this.label68.AutoSize = true;
+            this.label68.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label68.Location = new System.Drawing.Point(45, 81);
+            this.label68.Name = "label68";
+            this.label68.Size = new System.Drawing.Size(46, 20);
+            this.label68.TabIndex = 300;
+            this.label68.Text = "Units";
+            // 
+            // label69
+            // 
+            this.label69.AutoSize = true;
+            this.label69.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label69.Location = new System.Drawing.Point(812, 81);
+            this.label69.Name = "label69";
+            this.label69.Size = new System.Drawing.Size(70, 20);
+            this.label69.TabIndex = 299;
+            this.label69.Text = "Reactors";
+            // 
+            // numericFusionReactorPower
+            // 
+            this.numericFusionReactorPower.Font = new System.Drawing.Font("Consolas", 12F);
+            this.numericFusionReactorPower.Location = new System.Drawing.Point(952, 169);
+            this.numericFusionReactorPower.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericFusionReactorPower.Name = "numericFusionReactorPower";
+            this.numericFusionReactorPower.Size = new System.Drawing.Size(52, 26);
+            this.numericFusionReactorPower.TabIndex = 297;
+            this.numericFusionReactorPower.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.numericFusionReactorPower.Value = new decimal(new int[] {
+            2,
+            0,
+            0,
+            0});
+            // 
+            // numericQuantumChamberPower
+            // 
+            this.numericQuantumChamberPower.Font = new System.Drawing.Font("Consolas", 12F);
+            this.numericQuantumChamberPower.Location = new System.Drawing.Point(952, 201);
+            this.numericQuantumChamberPower.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericQuantumChamberPower.Name = "numericQuantumChamberPower";
+            this.numericQuantumChamberPower.Size = new System.Drawing.Size(52, 26);
+            this.numericQuantumChamberPower.TabIndex = 296;
+            this.numericQuantumChamberPower.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.numericQuantumChamberPower.Value = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            // 
+            // numericSingularityEnginePower
+            // 
+            this.numericSingularityEnginePower.Font = new System.Drawing.Font("Consolas", 12F);
+            this.numericSingularityEnginePower.Location = new System.Drawing.Point(952, 233);
+            this.numericSingularityEnginePower.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericSingularityEnginePower.Name = "numericSingularityEnginePower";
+            this.numericSingularityEnginePower.Size = new System.Drawing.Size(52, 26);
+            this.numericSingularityEnginePower.TabIndex = 295;
+            this.numericSingularityEnginePower.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.numericSingularityEnginePower.Value = new decimal(new int[] {
+            4,
+            0,
+            0,
+            0});
+            // 
+            // label67
+            // 
+            this.label67.AutoSize = true;
+            this.label67.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.label67.Location = new System.Drawing.Point(953, 114);
+            this.label67.Name = "label67";
+            this.label67.Size = new System.Drawing.Size(40, 15);
+            this.label67.TabIndex = 294;
+            this.label67.Text = "Power";
+            // 
+            // numericFissionPlantPower
+            // 
+            this.numericFissionPlantPower.Font = new System.Drawing.Font("Consolas", 12F);
+            this.numericFissionPlantPower.Location = new System.Drawing.Point(952, 137);
+            this.numericFissionPlantPower.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericFissionPlantPower.Name = "numericFissionPlantPower";
+            this.numericFissionPlantPower.Size = new System.Drawing.Size(52, 26);
+            this.numericFissionPlantPower.TabIndex = 293;
+            this.numericFissionPlantPower.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.numericFissionPlantPower.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // label60
+            // 
+            this.label60.AutoSize = true;
+            this.label60.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.label60.Location = new System.Drawing.Point(803, 114);
+            this.label60.Name = "label60";
+            this.label60.Size = new System.Drawing.Size(44, 15);
+            this.label60.TabIndex = 290;
+            this.label60.Text = "Unlock";
+            // 
+            // label61
+            // 
+            this.label61.AutoSize = true;
+            this.label61.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.label61.Location = new System.Drawing.Point(884, 114);
+            this.label61.Name = "label61";
+            this.label61.Size = new System.Drawing.Size(45, 15);
+            this.label61.TabIndex = 291;
+            this.label61.Text = "Disable";
+            // 
+            // label62
+            // 
+            this.label62.AutoSize = true;
+            this.label62.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.label62.Location = new System.Drawing.Point(850, 114);
+            this.label62.Name = "label62";
+            this.label62.Size = new System.Drawing.Size(29, 15);
+            this.label62.TabIndex = 292;
+            this.label62.Text = "Free";
+            // 
+            // checkBoxUnlockQuantumChamber
+            // 
+            this.checkBoxUnlockQuantumChamber.AutoSize = true;
+            this.checkBoxUnlockQuantumChamber.Location = new System.Drawing.Point(822, 205);
+            this.checkBoxUnlockQuantumChamber.Name = "checkBoxUnlockQuantumChamber";
+            this.checkBoxUnlockQuantumChamber.Size = new System.Drawing.Size(15, 14);
+            this.checkBoxUnlockQuantumChamber.TabIndex = 275;
+            this.checkBoxUnlockQuantumChamber.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxDisableQuantumChamber
+            // 
+            this.checkBoxDisableQuantumChamber.AutoSize = true;
+            this.checkBoxDisableQuantumChamber.Location = new System.Drawing.Point(898, 205);
+            this.checkBoxDisableQuantumChamber.Name = "checkBoxDisableQuantumChamber";
+            this.checkBoxDisableQuantumChamber.Size = new System.Drawing.Size(15, 14);
+            this.checkBoxDisableQuantumChamber.TabIndex = 276;
+            this.checkBoxDisableQuantumChamber.UseVisualStyleBackColor = true;
+            // 
+            // label63
+            // 
+            this.label63.AutoSize = true;
+            this.label63.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label63.Location = new System.Drawing.Point(1020, 203);
+            this.label63.Name = "label63";
+            this.label63.Size = new System.Drawing.Size(144, 19);
+            this.label63.TabIndex = 277;
+            this.label63.Text = "Quantum Chamber";
+            // 
+            // checkBoxUnlockSingularityEngine
+            // 
+            this.checkBoxUnlockSingularityEngine.AutoSize = true;
+            this.checkBoxUnlockSingularityEngine.Location = new System.Drawing.Point(823, 237);
+            this.checkBoxUnlockSingularityEngine.Name = "checkBoxUnlockSingularityEngine";
+            this.checkBoxUnlockSingularityEngine.Size = new System.Drawing.Size(15, 14);
+            this.checkBoxUnlockSingularityEngine.TabIndex = 278;
+            this.checkBoxUnlockSingularityEngine.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxDisableSingularityEngine
+            // 
+            this.checkBoxDisableSingularityEngine.AutoSize = true;
+            this.checkBoxDisableSingularityEngine.Location = new System.Drawing.Point(898, 237);
+            this.checkBoxDisableSingularityEngine.Name = "checkBoxDisableSingularityEngine";
+            this.checkBoxDisableSingularityEngine.Size = new System.Drawing.Size(15, 14);
+            this.checkBoxDisableSingularityEngine.TabIndex = 279;
+            this.checkBoxDisableSingularityEngine.UseVisualStyleBackColor = true;
+            // 
+            // label64
+            // 
+            this.label64.AutoSize = true;
+            this.label64.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label64.Location = new System.Drawing.Point(1020, 235);
+            this.label64.Name = "label64";
+            this.label64.Size = new System.Drawing.Size(171, 19);
+            this.label64.TabIndex = 280;
+            this.label64.Text = "Singularity Engine";
+            // 
+            // label65
+            // 
+            this.label65.AutoSize = true;
+            this.label65.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label65.Location = new System.Drawing.Point(1020, 139);
+            this.label65.Name = "label65";
+            this.label65.Size = new System.Drawing.Size(126, 19);
+            this.label65.TabIndex = 281;
+            this.label65.Text = "Fission Plant";
+            // 
+            // checkBoxDisableFissionPlant
+            // 
+            this.checkBoxDisableFissionPlant.AutoSize = true;
+            this.checkBoxDisableFissionPlant.Location = new System.Drawing.Point(898, 141);
+            this.checkBoxDisableFissionPlant.Name = "checkBoxDisableFissionPlant";
+            this.checkBoxDisableFissionPlant.Size = new System.Drawing.Size(15, 14);
+            this.checkBoxDisableFissionPlant.TabIndex = 282;
+            this.checkBoxDisableFissionPlant.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxFreeFusionReactor
+            // 
+            this.checkBoxFreeFusionReactor.AutoSize = true;
+            this.checkBoxFreeFusionReactor.Location = new System.Drawing.Point(860, 176);
+            this.checkBoxFreeFusionReactor.Name = "checkBoxFreeFusionReactor";
+            this.checkBoxFreeFusionReactor.Size = new System.Drawing.Size(15, 14);
+            this.checkBoxFreeFusionReactor.TabIndex = 289;
+            this.checkBoxFreeFusionReactor.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxFreeFissionPlant
+            // 
+            this.checkBoxFreeFissionPlant.AutoSize = true;
+            this.checkBoxFreeFissionPlant.Location = new System.Drawing.Point(860, 141);
+            this.checkBoxFreeFissionPlant.Name = "checkBoxFreeFissionPlant";
+            this.checkBoxFreeFissionPlant.Size = new System.Drawing.Size(15, 14);
+            this.checkBoxFreeFissionPlant.TabIndex = 288;
+            this.checkBoxFreeFissionPlant.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxFreeSingularityEngine
+            // 
+            this.checkBoxFreeSingularityEngine.AutoSize = true;
+            this.checkBoxFreeSingularityEngine.Location = new System.Drawing.Point(861, 237);
+            this.checkBoxFreeSingularityEngine.Name = "checkBoxFreeSingularityEngine";
+            this.checkBoxFreeSingularityEngine.Size = new System.Drawing.Size(15, 14);
+            this.checkBoxFreeSingularityEngine.TabIndex = 287;
+            this.checkBoxFreeSingularityEngine.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxFreeQuantumChamber
+            // 
+            this.checkBoxFreeQuantumChamber.AutoSize = true;
+            this.checkBoxFreeQuantumChamber.Location = new System.Drawing.Point(860, 205);
+            this.checkBoxFreeQuantumChamber.Name = "checkBoxFreeQuantumChamber";
+            this.checkBoxFreeQuantumChamber.Size = new System.Drawing.Size(15, 14);
+            this.checkBoxFreeQuantumChamber.TabIndex = 286;
+            this.checkBoxFreeQuantumChamber.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxUnlockFusionReactor
+            // 
+            this.checkBoxUnlockFusionReactor.AutoSize = true;
+            this.checkBoxUnlockFusionReactor.Location = new System.Drawing.Point(822, 176);
+            this.checkBoxUnlockFusionReactor.Name = "checkBoxUnlockFusionReactor";
+            this.checkBoxUnlockFusionReactor.Size = new System.Drawing.Size(15, 14);
+            this.checkBoxUnlockFusionReactor.TabIndex = 283;
+            this.checkBoxUnlockFusionReactor.UseVisualStyleBackColor = true;
+            // 
+            // label66
+            // 
+            this.label66.AutoSize = true;
+            this.label66.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label66.Location = new System.Drawing.Point(1020, 174);
+            this.label66.Name = "label66";
+            this.label66.Size = new System.Drawing.Size(135, 19);
+            this.label66.TabIndex = 284;
+            this.label66.Text = "Fusion Reactor";
+            // 
+            // checkBoxDisableFusionReactor
+            // 
+            this.checkBoxDisableFusionReactor.AutoSize = true;
+            this.checkBoxDisableFusionReactor.Location = new System.Drawing.Point(898, 176);
+            this.checkBoxDisableFusionReactor.Name = "checkBoxDisableFusionReactor";
+            this.checkBoxDisableFusionReactor.Size = new System.Drawing.Size(15, 14);
+            this.checkBoxDisableFusionReactor.TabIndex = 285;
+            this.checkBoxDisableFusionReactor.UseVisualStyleBackColor = true;
             // 
             // label57
             // 
@@ -2595,312 +2829,89 @@
             this.label37.TabIndex = 250;
             this.label37.Text = "Nerve Gas Pods";
             // 
-            // numericFusionReactorPower
+            // checkBoxDisableTroopTransport
             // 
-            this.numericFusionReactorPower.Font = new System.Drawing.Font("Consolas", 12F);
-            this.numericFusionReactorPower.Location = new System.Drawing.Point(952, 169);
-            this.numericFusionReactorPower.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericFusionReactorPower.Name = "numericFusionReactorPower";
-            this.numericFusionReactorPower.Size = new System.Drawing.Size(52, 26);
-            this.numericFusionReactorPower.TabIndex = 297;
-            this.numericFusionReactorPower.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.numericFusionReactorPower.Value = new decimal(new int[] {
-            2,
-            0,
-            0,
-            0});
+            this.checkBoxDisableTroopTransport.AutoSize = true;
+            this.checkBoxDisableTroopTransport.Location = new System.Drawing.Point(129, 391);
+            this.checkBoxDisableTroopTransport.Name = "checkBoxDisableTroopTransport";
+            this.checkBoxDisableTroopTransport.Size = new System.Drawing.Size(15, 14);
+            this.checkBoxDisableTroopTransport.TabIndex = 223;
+            this.checkBoxDisableTroopTransport.UseVisualStyleBackColor = true;
             // 
-            // numericQuantumChamberPower
+            // checkBoxFreeInfantry
             // 
-            this.numericQuantumChamberPower.Font = new System.Drawing.Font("Consolas", 12F);
-            this.numericQuantumChamberPower.Location = new System.Drawing.Point(952, 201);
-            this.numericQuantumChamberPower.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericQuantumChamberPower.Name = "numericQuantumChamberPower";
-            this.numericQuantumChamberPower.Size = new System.Drawing.Size(52, 26);
-            this.numericQuantumChamberPower.TabIndex = 296;
-            this.numericQuantumChamberPower.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.numericQuantumChamberPower.Value = new decimal(new int[] {
-            3,
-            0,
-            0,
-            0});
+            this.checkBoxFreeInfantry.AutoSize = true;
+            this.checkBoxFreeInfantry.Location = new System.Drawing.Point(91, 137);
+            this.checkBoxFreeInfantry.Name = "checkBoxFreeInfantry";
+            this.checkBoxFreeInfantry.Size = new System.Drawing.Size(15, 14);
+            this.checkBoxFreeInfantry.TabIndex = 222;
+            this.checkBoxFreeInfantry.UseVisualStyleBackColor = true;
             // 
-            // numericSingularityEnginePower
+            // tabPageFacilities
             // 
-            this.numericSingularityEnginePower.Font = new System.Drawing.Font("Consolas", 12F);
-            this.numericSingularityEnginePower.Location = new System.Drawing.Point(952, 233);
-            this.numericSingularityEnginePower.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericSingularityEnginePower.Name = "numericSingularityEnginePower";
-            this.numericSingularityEnginePower.Size = new System.Drawing.Size(52, 26);
-            this.numericSingularityEnginePower.TabIndex = 295;
-            this.numericSingularityEnginePower.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.numericSingularityEnginePower.Value = new decimal(new int[] {
-            4,
-            0,
-            0,
-            0});
-            // 
-            // label67
-            // 
-            this.label67.AutoSize = true;
-            this.label67.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.label67.Location = new System.Drawing.Point(953, 114);
-            this.label67.Name = "label67";
-            this.label67.Size = new System.Drawing.Size(40, 15);
-            this.label67.TabIndex = 294;
-            this.label67.Text = "Power";
-            // 
-            // numericFissionPlantPower
-            // 
-            this.numericFissionPlantPower.Font = new System.Drawing.Font("Consolas", 12F);
-            this.numericFissionPlantPower.Location = new System.Drawing.Point(952, 137);
-            this.numericFissionPlantPower.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericFissionPlantPower.Name = "numericFissionPlantPower";
-            this.numericFissionPlantPower.Size = new System.Drawing.Size(52, 26);
-            this.numericFissionPlantPower.TabIndex = 293;
-            this.numericFissionPlantPower.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.numericFissionPlantPower.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // label60
-            // 
-            this.label60.AutoSize = true;
-            this.label60.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.label60.Location = new System.Drawing.Point(803, 114);
-            this.label60.Name = "label60";
-            this.label60.Size = new System.Drawing.Size(44, 15);
-            this.label60.TabIndex = 290;
-            this.label60.Text = "Unlock";
-            // 
-            // label61
-            // 
-            this.label61.AutoSize = true;
-            this.label61.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.label61.Location = new System.Drawing.Point(884, 114);
-            this.label61.Name = "label61";
-            this.label61.Size = new System.Drawing.Size(45, 15);
-            this.label61.TabIndex = 291;
-            this.label61.Text = "Disable";
-            // 
-            // label62
-            // 
-            this.label62.AutoSize = true;
-            this.label62.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.label62.Location = new System.Drawing.Point(850, 114);
-            this.label62.Name = "label62";
-            this.label62.Size = new System.Drawing.Size(29, 15);
-            this.label62.TabIndex = 292;
-            this.label62.Text = "Free";
-            // 
-            // checkBoxUnlockQuantumChamber
-            // 
-            this.checkBoxUnlockQuantumChamber.AutoSize = true;
-            this.checkBoxUnlockQuantumChamber.Location = new System.Drawing.Point(822, 205);
-            this.checkBoxUnlockQuantumChamber.Name = "checkBoxUnlockQuantumChamber";
-            this.checkBoxUnlockQuantumChamber.Size = new System.Drawing.Size(15, 14);
-            this.checkBoxUnlockQuantumChamber.TabIndex = 275;
-            this.checkBoxUnlockQuantumChamber.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxDisableQuantumChamber
-            // 
-            this.checkBoxDisableQuantumChamber.AutoSize = true;
-            this.checkBoxDisableQuantumChamber.Location = new System.Drawing.Point(898, 205);
-            this.checkBoxDisableQuantumChamber.Name = "checkBoxDisableQuantumChamber";
-            this.checkBoxDisableQuantumChamber.Size = new System.Drawing.Size(15, 14);
-            this.checkBoxDisableQuantumChamber.TabIndex = 276;
-            this.checkBoxDisableQuantumChamber.UseVisualStyleBackColor = true;
-            // 
-            // label63
-            // 
-            this.label63.AutoSize = true;
-            this.label63.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label63.Location = new System.Drawing.Point(1020, 203);
-            this.label63.Name = "label63";
-            this.label63.Size = new System.Drawing.Size(144, 19);
-            this.label63.TabIndex = 277;
-            this.label63.Text = "Quantum Chamber";
-            // 
-            // checkBoxUnlockSingularityEngine
-            // 
-            this.checkBoxUnlockSingularityEngine.AutoSize = true;
-            this.checkBoxUnlockSingularityEngine.Location = new System.Drawing.Point(823, 237);
-            this.checkBoxUnlockSingularityEngine.Name = "checkBoxUnlockSingularityEngine";
-            this.checkBoxUnlockSingularityEngine.Size = new System.Drawing.Size(15, 14);
-            this.checkBoxUnlockSingularityEngine.TabIndex = 278;
-            this.checkBoxUnlockSingularityEngine.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxDisableSingularityEngine
-            // 
-            this.checkBoxDisableSingularityEngine.AutoSize = true;
-            this.checkBoxDisableSingularityEngine.Location = new System.Drawing.Point(898, 237);
-            this.checkBoxDisableSingularityEngine.Name = "checkBoxDisableSingularityEngine";
-            this.checkBoxDisableSingularityEngine.Size = new System.Drawing.Size(15, 14);
-            this.checkBoxDisableSingularityEngine.TabIndex = 279;
-            this.checkBoxDisableSingularityEngine.UseVisualStyleBackColor = true;
-            // 
-            // label64
-            // 
-            this.label64.AutoSize = true;
-            this.label64.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label64.Location = new System.Drawing.Point(1020, 235);
-            this.label64.Name = "label64";
-            this.label64.Size = new System.Drawing.Size(171, 19);
-            this.label64.TabIndex = 280;
-            this.label64.Text = "Singularity Engine";
-            // 
-            // label65
-            // 
-            this.label65.AutoSize = true;
-            this.label65.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label65.Location = new System.Drawing.Point(1020, 139);
-            this.label65.Name = "label65";
-            this.label65.Size = new System.Drawing.Size(126, 19);
-            this.label65.TabIndex = 281;
-            this.label65.Text = "Fission Plant";
-            // 
-            // checkBoxDisableFissionPlant
-            // 
-            this.checkBoxDisableFissionPlant.AutoSize = true;
-            this.checkBoxDisableFissionPlant.Location = new System.Drawing.Point(898, 141);
-            this.checkBoxDisableFissionPlant.Name = "checkBoxDisableFissionPlant";
-            this.checkBoxDisableFissionPlant.Size = new System.Drawing.Size(15, 14);
-            this.checkBoxDisableFissionPlant.TabIndex = 282;
-            this.checkBoxDisableFissionPlant.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxFreeFusionReactor
-            // 
-            this.checkBoxFreeFusionReactor.AutoSize = true;
-            this.checkBoxFreeFusionReactor.Location = new System.Drawing.Point(860, 176);
-            this.checkBoxFreeFusionReactor.Name = "checkBoxFreeFusionReactor";
-            this.checkBoxFreeFusionReactor.Size = new System.Drawing.Size(15, 14);
-            this.checkBoxFreeFusionReactor.TabIndex = 289;
-            this.checkBoxFreeFusionReactor.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxFreeFissionPlant
-            // 
-            this.checkBoxFreeFissionPlant.AutoSize = true;
-            this.checkBoxFreeFissionPlant.Location = new System.Drawing.Point(860, 141);
-            this.checkBoxFreeFissionPlant.Name = "checkBoxFreeFissionPlant";
-            this.checkBoxFreeFissionPlant.Size = new System.Drawing.Size(15, 14);
-            this.checkBoxFreeFissionPlant.TabIndex = 288;
-            this.checkBoxFreeFissionPlant.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxFreeSingularityEngine
-            // 
-            this.checkBoxFreeSingularityEngine.AutoSize = true;
-            this.checkBoxFreeSingularityEngine.Location = new System.Drawing.Point(861, 237);
-            this.checkBoxFreeSingularityEngine.Name = "checkBoxFreeSingularityEngine";
-            this.checkBoxFreeSingularityEngine.Size = new System.Drawing.Size(15, 14);
-            this.checkBoxFreeSingularityEngine.TabIndex = 287;
-            this.checkBoxFreeSingularityEngine.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxFreeQuantumChamber
-            // 
-            this.checkBoxFreeQuantumChamber.AutoSize = true;
-            this.checkBoxFreeQuantumChamber.Location = new System.Drawing.Point(860, 205);
-            this.checkBoxFreeQuantumChamber.Name = "checkBoxFreeQuantumChamber";
-            this.checkBoxFreeQuantumChamber.Size = new System.Drawing.Size(15, 14);
-            this.checkBoxFreeQuantumChamber.TabIndex = 286;
-            this.checkBoxFreeQuantumChamber.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxUnlockFusionReactor
-            // 
-            this.checkBoxUnlockFusionReactor.AutoSize = true;
-            this.checkBoxUnlockFusionReactor.Location = new System.Drawing.Point(822, 176);
-            this.checkBoxUnlockFusionReactor.Name = "checkBoxUnlockFusionReactor";
-            this.checkBoxUnlockFusionReactor.Size = new System.Drawing.Size(15, 14);
-            this.checkBoxUnlockFusionReactor.TabIndex = 283;
-            this.checkBoxUnlockFusionReactor.UseVisualStyleBackColor = true;
-            // 
-            // label66
-            // 
-            this.label66.AutoSize = true;
-            this.label66.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label66.Location = new System.Drawing.Point(1020, 174);
-            this.label66.Name = "label66";
-            this.label66.Size = new System.Drawing.Size(135, 19);
-            this.label66.TabIndex = 284;
-            this.label66.Text = "Fusion Reactor";
-            // 
-            // checkBoxDisableFusionReactor
-            // 
-            this.checkBoxDisableFusionReactor.AutoSize = true;
-            this.checkBoxDisableFusionReactor.Location = new System.Drawing.Point(898, 176);
-            this.checkBoxDisableFusionReactor.Name = "checkBoxDisableFusionReactor";
-            this.checkBoxDisableFusionReactor.Size = new System.Drawing.Size(15, 14);
-            this.checkBoxDisableFusionReactor.TabIndex = 285;
-            this.checkBoxDisableFusionReactor.UseVisualStyleBackColor = true;
-            // 
-            // label69
-            // 
-            this.label69.AutoSize = true;
-            this.label69.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label69.Location = new System.Drawing.Point(812, 81);
-            this.label69.Name = "label69";
-            this.label69.Size = new System.Drawing.Size(70, 20);
-            this.label69.TabIndex = 299;
-            this.label69.Text = "Reactors";
-            // 
-            // label68
-            // 
-            this.label68.AutoSize = true;
-            this.label68.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label68.Location = new System.Drawing.Point(45, 81);
-            this.label68.Name = "label68";
-            this.label68.Size = new System.Drawing.Size(46, 20);
-            this.label68.TabIndex = 300;
-            this.label68.Text = "Units";
-            // 
-            // label70
-            // 
-            this.label70.AutoSize = true;
-            this.label70.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label70.Location = new System.Drawing.Point(419, 81);
-            this.label70.Name = "label70";
-            this.label70.Size = new System.Drawing.Size(66, 20);
-            this.label70.TabIndex = 301;
-            this.label70.Text = "Abilities";
-            // 
-            // checkBoxEnableHeavyTransport
-            // 
-            this.checkBoxEnableHeavyTransport.AutoSize = true;
-            this.checkBoxEnableHeavyTransport.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxEnableHeavyTransport.Location = new System.Drawing.Point(427, 392);
-            this.checkBoxEnableHeavyTransport.Name = "checkBoxEnableHeavyTransport";
-            this.checkBoxEnableHeavyTransport.Size = new System.Drawing.Size(370, 23);
-            this.checkBoxEnableHeavyTransport.TabIndex = 302;
-            this.checkBoxEnableHeavyTransport.Text = "Enable Heavy Transport special ability";
-            this.checkBoxEnableHeavyTransport.UseVisualStyleBackColor = true;
-            // 
-            // label71
-            // 
-            this.label71.AutoSize = true;
-            this.label71.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label71.Location = new System.Drawing.Point(35, 23);
-            this.label71.Name = "label71";
-            this.label71.Size = new System.Drawing.Size(621, 38);
-            this.label71.TabIndex = 303;
-            this.label71.Text = "Unchecked boxes will not interfere with options selected in General.\r\nChecked box" +
-    "es will take precedence over options selected in General.";
+            this.tabPageFacilities.Controls.Add(this.label72);
+            this.tabPageFacilities.Controls.Add(this.label51);
+            this.tabPageFacilities.Controls.Add(this.label50);
+            this.tabPageFacilities.Controls.Add(this.checkBoxUnlockPsiGate);
+            this.tabPageFacilities.Controls.Add(this.checkBoxFreeRecreationCommons);
+            this.tabPageFacilities.Controls.Add(this.checkBoxDisablePsiGate);
+            this.tabPageFacilities.Controls.Add(this.checkBoxUnlockRecreationCommons);
+            this.tabPageFacilities.Controls.Add(this.label49);
+            this.tabPageFacilities.Controls.Add(this.checkBoxUnlockSkunkworks);
+            this.tabPageFacilities.Controls.Add(this.checkBoxDisableSkunkworks);
+            this.tabPageFacilities.Controls.Add(this.label48);
+            this.tabPageFacilities.Controls.Add(this.checkBoxFreeNessusMiningStation);
+            this.tabPageFacilities.Controls.Add(this.checkBoxUnlockHabComplex);
+            this.tabPageFacilities.Controls.Add(this.checkBoxFreeOrbitalPowerTransmitter);
+            this.tabPageFacilities.Controls.Add(this.checkBoxDisableHabComplex);
+            this.tabPageFacilities.Controls.Add(this.checkBoxFreeSkyHydroponicsLab);
+            this.tabPageFacilities.Controls.Add(this.label47);
+            this.tabPageFacilities.Controls.Add(this.checkBoxFreeOrbitalDefensePod);
+            this.tabPageFacilities.Controls.Add(this.checkBoxUnlockPressureDome);
+            this.tabPageFacilities.Controls.Add(this.label43);
+            this.tabPageFacilities.Controls.Add(this.checkBoxDisablePressureDome);
+            this.tabPageFacilities.Controls.Add(this.checkBoxDisableNessusMiningStation);
+            this.tabPageFacilities.Controls.Add(this.label46);
+            this.tabPageFacilities.Controls.Add(this.checkBoxUnlockNessusMiningStation);
+            this.tabPageFacilities.Controls.Add(this.checkBoxDisableRecreationCommons);
+            this.tabPageFacilities.Controls.Add(this.label52);
+            this.tabPageFacilities.Controls.Add(this.label45);
+            this.tabPageFacilities.Controls.Add(this.checkBoxDisableOrbitalPowerTransmitter);
+            this.tabPageFacilities.Controls.Add(this.checkBoxUnlockHologramTheatre);
+            this.tabPageFacilities.Controls.Add(this.checkBoxUnlockOrbitalPowerTransmitter);
+            this.tabPageFacilities.Controls.Add(this.checkBoxDisableHologramTheatre);
+            this.tabPageFacilities.Controls.Add(this.label53);
+            this.tabPageFacilities.Controls.Add(this.label44);
+            this.tabPageFacilities.Controls.Add(this.checkBoxDisableSkyHydroponicsLab);
+            this.tabPageFacilities.Controls.Add(this.checkBoxUnlockParadiseGarden);
+            this.tabPageFacilities.Controls.Add(this.checkBoxUnlockSkyHydroponicsLab);
+            this.tabPageFacilities.Controls.Add(this.checkBoxDisableParadiseGarden);
+            this.tabPageFacilities.Controls.Add(this.label54);
+            this.tabPageFacilities.Controls.Add(this.label42);
+            this.tabPageFacilities.Controls.Add(this.checkBoxDisableOrbitalDefensePod);
+            this.tabPageFacilities.Controls.Add(this.checkBoxUnlockPunishmentSphere);
+            this.tabPageFacilities.Controls.Add(this.checkBoxUnlockOrbitalDefensePod);
+            this.tabPageFacilities.Controls.Add(this.checkBoxDisablePunishmentSphere);
+            this.tabPageFacilities.Controls.Add(this.checkBoxFreeHabitationDome);
+            this.tabPageFacilities.Controls.Add(this.label41);
+            this.tabPageFacilities.Controls.Add(this.checkBoxFreePunishmentSphere);
+            this.tabPageFacilities.Controls.Add(this.checkBoxUnlockHabitationDome);
+            this.tabPageFacilities.Controls.Add(this.checkBoxFreeParadiseGarden);
+            this.tabPageFacilities.Controls.Add(this.checkBoxDisableHabitationDome);
+            this.tabPageFacilities.Controls.Add(this.checkBoxFreeHologramTheatre);
+            this.tabPageFacilities.Controls.Add(this.label40);
+            this.tabPageFacilities.Controls.Add(this.checkBoxFreePressureDome);
+            this.tabPageFacilities.Controls.Add(this.label39);
+            this.tabPageFacilities.Controls.Add(this.checkBoxFreeHabComplex);
+            this.tabPageFacilities.Controls.Add(this.checkBoxFreePsiGate);
+            this.tabPageFacilities.Controls.Add(this.checkBoxFreeSkunkworks);
+            this.tabPageFacilities.Location = new System.Drawing.Point(4, 30);
+            this.tabPageFacilities.Name = "tabPageFacilities";
+            this.tabPageFacilities.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageFacilities.Size = new System.Drawing.Size(1202, 608);
+            this.tabPageFacilities.TabIndex = 1;
+            this.tabPageFacilities.Text = "Facilities";
+            this.tabPageFacilities.UseVisualStyleBackColor = true;
             // 
             // label72
             // 
@@ -2913,22 +2924,11 @@
             this.label72.Text = "Unchecked boxes will not interfere with options selected in General.\r\nChecked box" +
     "es will take precedence over options selected in General.";
             // 
-            // label73
-            // 
-            this.label73.AutoSize = true;
-            this.label73.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label73.Location = new System.Drawing.Point(32, 23);
-            this.label73.Name = "label73";
-            this.label73.Size = new System.Drawing.Size(621, 38);
-            this.label73.TabIndex = 305;
-            this.label73.Text = "Unchecked boxes will not interfere with options selected in General.\r\nChecked box" +
-    "es will take precedence over options selected in General.";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1234, 660);
+            this.ClientSize = new System.Drawing.Size(1234, 758);
             this.Controls.Add(this.tabControl);
             this.Controls.Add(this.buttonSave);
             this.Controls.Add(this.labelGameFolder);
@@ -2938,6 +2938,8 @@
             this.Name = "Form1";
             this.Text = "Alpha Modder";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.ResizeBegin += new System.EventHandler(this.Form1_ResizeBegin);
+            this.ResizeEnd += new System.EventHandler(this.Form1_ResizeEnd);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarTerraformingRate)).EndInit();
@@ -2953,14 +2955,14 @@
             this.tabPageOther.ResumeLayout(false);
             this.tabPageOther.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numTurnsBetweenCouncils)).EndInit();
-            this.tabPageFacilities.ResumeLayout(false);
-            this.tabPageFacilities.PerformLayout();
             this.tabPageUnits.ResumeLayout(false);
             this.tabPageUnits.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericFusionReactorPower)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericQuantumChamberPower)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericSingularityEnginePower)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericFissionPlantPower)).EndInit();
+            this.tabPageFacilities.ResumeLayout(false);
+            this.tabPageFacilities.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -933,5 +933,15 @@ namespace AlphaModder
             else if(trackBarTechDiscoveryRate.Value == 9)
                 labelTechDiscoveryRate.Text = "x10";
         }
+
+        private void Form1_ResizeBegin(object sender, EventArgs e)
+        {
+            this.SuspendLayout();
+        }
+
+        private void Form1_ResizeEnd(object sender, EventArgs e)
+        {
+            this.ResumeLayout(true);
+        }
     }
 }
