@@ -101,6 +101,9 @@ namespace AlphaModder.Utils
         {
             if (Properties.Settings.Default.EnableSounds == true)
             {
+                // if the enable sounds option is enabled,
+                // get the path of the game directory and combine it with the relative path
+                // of the sound file
                 String absolutePath = Properties.Settings.Default.GameFolder + relativePath;
                 System.Media.SoundPlayer soundPlayer = new System.Media.SoundPlayer(absolutePath);
                 soundPlayer.Play();
@@ -110,10 +113,10 @@ namespace AlphaModder.Utils
         // play a random sound from the provided list
         public static void playRandomSound(List<String> relativePathList)
         {
+            // get a random sound from the provided list and call playSound()
             Random random = new Random();
             int r = random.Next(relativePathList.Count);
-            String absolutePath = Properties.Settings.Default.GameFolder + relativePathList[r];
-            playSound(absolutePath);
+            playSound(relativePathList[r]);
         }
     }
 }

@@ -35,6 +35,7 @@ namespace AlphaModder.Constants
         public const String PLEASE_DONT_GO = "//fx//CPU please don't go.wav";
         public const String POD_RECOVERED = "//fx//cpu pod recovered.wav";
         public const String PRODUCTION_COMPLETE = "//fx//cpu prod complete.wav";
+        public const String PROJECT_COMPLETE = "//fx//CPU project complete.wav";
         public const String PROJECT_INITIATED = "//fx//CPU project initiated.wav";
         public const String PROBE_TEAM_COMPROMISED = "//fx//cpu pt compromised.wav";
         public const String REQUEST_CONFIRMATION = "//fx//cpu request confirmation.wav";

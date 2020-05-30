@@ -91,7 +91,12 @@ namespace AlphaModder
             alphaConfiguration.isAlphax = false;
             if(DataUtils.saveAlphaFile(alphaConfiguration, Properties.Settings.Default.AlphaFilePath))
             {
-                SystemUtils.playSound(Sounds.PRODUCTION_COMPLETE);
+                // play sound for success
+                List<String> saveSoundList = new List<String>();
+                saveSoundList.Add(Sounds.PRODUCTION_COMPLETE);
+                saveSoundList.Add(Sounds.PROJECT_COMPLETE);
+                SystemUtils.playRandomSound(saveSoundList);
+
                 MessageBox.Show("Settings applied successfully.");
             } else
             {
