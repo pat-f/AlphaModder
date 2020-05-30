@@ -99,9 +99,12 @@ namespace AlphaModder.Utils
         // play the specified sound
         public static void playSound(String relativePath)
         {
-            String absolutePath = Properties.Settings.Default.GameFolder + relativePath;
-            System.Media.SoundPlayer soundPlayer = new System.Media.SoundPlayer(absolutePath);
-            soundPlayer.Play();
+            if (Properties.Settings.Default.EnableSounds == true)
+            {
+                String absolutePath = Properties.Settings.Default.GameFolder + relativePath;
+                System.Media.SoundPlayer soundPlayer = new System.Media.SoundPlayer(absolutePath);
+                soundPlayer.Play();
+            }
         }
 
         // play a random sound from the provided list

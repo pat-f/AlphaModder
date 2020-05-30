@@ -91,6 +91,7 @@ namespace AlphaModder
             alphaConfiguration.isAlphax = false;
             if(DataUtils.saveAlphaFile(alphaConfiguration, Properties.Settings.Default.AlphaFilePath))
             {
+                SystemUtils.playSound(Sounds.PRODUCTION_COMPLETE);
                 MessageBox.Show("Settings applied successfully.");
             } else
             {
@@ -942,6 +943,13 @@ namespace AlphaModder
         private void Form1_ResizeEnd(object sender, EventArgs e)
         {
             this.ResumeLayout(true);
+        }
+
+        private void SettingsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // open the settings/options screen
+            OptionsScreen optionsScreen = new OptionsScreen();
+            optionsScreen.Show();
         }
     }
 }
