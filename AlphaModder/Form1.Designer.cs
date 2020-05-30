@@ -306,6 +306,7 @@
             this.checkBoxDisableProbeTeams.Size = new System.Drawing.Size(15, 14);
             this.checkBoxDisableProbeTeams.TabIndex = 0;
             this.checkBoxDisableProbeTeams.UseVisualStyleBackColor = true;
+            this.checkBoxDisableProbeTeams.CheckedChanged += new System.EventHandler(this.CheckBoxDisableProbeTeams_CheckedChanged);
             // 
             // checkBoxUnlockTerraforming
             // 
@@ -2946,6 +2947,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Alpha Modder";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResizeBegin += new System.EventHandler(this.Form1_ResizeBegin);
             this.ResizeEnd += new System.EventHandler(this.Form1_ResizeEnd);

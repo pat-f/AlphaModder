@@ -25,6 +25,8 @@ namespace AlphaModder
             else
                 Properties.Settings.Default.EnableSounds = false;
 
+            Properties.Settings.Default.Save();
+
             this.Close();
         }
 

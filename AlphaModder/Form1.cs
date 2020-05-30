@@ -956,5 +956,18 @@ namespace AlphaModder
             OptionsScreen optionsScreen = new OptionsScreen();
             optionsScreen.Show();
         }
+
+        // disable probe teams sound effect
+        private void CheckBoxDisableProbeTeams_CheckedChanged(object sender, EventArgs e)
+        {
+            if (((CheckBox)sender).Checked == true)
+                SystemUtils.playSound(Sounds.PROBE_TEAM_COMPROMISED);
+        }
+
+        // when the app is closed, save the settings
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Properties.Settings.Default.Save();
+        }
     }
 }
