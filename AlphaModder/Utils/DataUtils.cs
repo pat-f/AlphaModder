@@ -44,15 +44,6 @@ namespace AlphaModder.Utils
             return false;
         }
 
-        // save preset json file
-        public static bool savePresetJsonFile(String jsonString)
-        {
-            String directory = Properties.Settings.Default.GameFolder + AlphaModderConstants.PRESETS_FOLDER_RELATIVE_PATH;
-            Directory.CreateDirectory(directory);
-            File.WriteAllText(directory + "testfile2.json", jsonString);
-            return true;
-        }
-
         // sets the game resolution by rewriting the Alpha Centauri.ini file
         // with DirectDraw=0 for hi res and DirectDraw=1 for lo res
         public static void setResolution(bool highRes)
@@ -81,10 +72,39 @@ namespace AlphaModder.Utils
 
         }
 
+        // save preset json file
+        // todo - refactor this
+        public static bool savePresetJsonFile(String jsonString, String presetName)
+        {
+            String directory = Properties.Settings.Default.GameFolder + AlphaModderConstants.PRESETS_FOLDER_RELATIVE_PATH;
+            Directory.CreateDirectory(directory);
+            File.WriteAllText(directory + presetName + ".json", jsonString);
+            return true;
+        }
+
         public static string getPresetAsJsonString(String presetName)
         {
             String presetAbsolutePath = Properties.Settings.Default.GameFolder + AlphaModderConstants.PRESETS_FOLDER_RELATIVE_PATH + presetName + ".json";
             return File.ReadAllText(presetAbsolutePath);
+        }
+
+        public static List<string> getPresetsList()
+        {
+            String presetsFolder = Properties.Settings.Default.GameFolder + AlphaModderConstants.PRESETS_FOLDER_RELATIVE_PATH;
+            Directory.CreateDirectory(presetsFolder);
+
+            DirectoryInfo directoryInfo = new DirectoryInfo(presetsFolder);
+            FileInfo[] presetFiles = directoryInfo.GetFiles("*.json");
+
+            List<String> presetsList = new List<String>();
+            foreach(FileInfo file in presetFiles)
+            {
+                String fileName = file.Name;
+                String presetName = fileName.Substring(0, fileName.Length - 5);
+                presetsList.Add(presetName);
+            }
+            presetsList.Sort();
+            return presetsList;
         }
 
         private static String getAlphaFileString(AlphaConfiguration alphaConfiguration)

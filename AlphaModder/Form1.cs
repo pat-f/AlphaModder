@@ -40,6 +40,7 @@ namespace AlphaModder
             labelHugePlanetSize.Text = "Default \n(128 x 64)";
 
             setMousewheelHandlersDisable();
+            refreshPresetsDropdown();
         }
 
         // set control mousewheel handlers to do nothing so they don't change value when the user
@@ -1061,12 +1062,24 @@ namespace AlphaModder
 
         private void ButtonSavePreset_Click(object sender, EventArgs e)
         {
-            DataUtils.savePresetJsonFile(buildPresetJson());
+            DataUtils.savePresetJsonFile(buildPresetJson(), comboBoxPresets.Text);
+            refreshPresetsDropdown();
         }
 
         private void ButtonLoadPreset_Click(object sender, EventArgs e)
         {
-            loadPresetToControls("testfile2");
+            loadPresetToControls(comboBoxPresets.Text);
+            refreshPresetsDropdown();
+        }
+
+        private void refreshPresetsDropdown()
+        {
+            comboBoxPresets.Items.Clear();
+            List<String> presetsList = DataUtils.getPresetsList();
+            foreach (String presetName in presetsList)
+            {
+                comboBoxPresets.Items.Add(presetName);
+            }
         }
     }
 }

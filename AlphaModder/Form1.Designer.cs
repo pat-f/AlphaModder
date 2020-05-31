@@ -39,6 +39,7 @@
             this.saveAlphatxtAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveAlphaxtxtAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openGameFolderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hurryCostCalculatorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gameResolutionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -276,9 +277,9 @@
             this.checkBoxFreeInfantry = new System.Windows.Forms.CheckBox();
             this.tabPageFacilities = new System.Windows.Forms.TabPage();
             this.label72 = new System.Windows.Forms.Label();
-            this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buttonSavePreset = new System.Windows.Forms.Button();
             this.buttonLoadPreset = new System.Windows.Forms.Button();
+            this.comboBoxPresets = new System.Windows.Forms.ComboBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarTerraformingRate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarDroneRiots)).BeginInit();
@@ -405,6 +406,13 @@
             this.openGameFolderToolStripMenuItem.Size = new System.Drawing.Size(232, 22);
             this.openGameFolderToolStripMenuItem.Text = "Open Game Folder in Explorer";
             this.openGameFolderToolStripMenuItem.Click += new System.EventHandler(this.OpenGameFolderToolStripMenuItem_Click);
+            // 
+            // optionsToolStripMenuItem
+            // 
+            this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
+            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(232, 22);
+            this.optionsToolStripMenuItem.Text = "Options";
+            this.optionsToolStripMenuItem.Click += new System.EventHandler(this.SettingsToolStripMenuItem_Click);
             // 
             // toolsToolStripMenuItem
             // 
@@ -2929,13 +2937,6 @@
             this.label72.Text = "Unchecked boxes will not interfere with options selected in General.\r\nChecked box" +
     "es will take precedence over options selected in General.";
             // 
-            // optionsToolStripMenuItem
-            // 
-            this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
-            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(232, 22);
-            this.optionsToolStripMenuItem.Text = "Options";
-            this.optionsToolStripMenuItem.Click += new System.EventHandler(this.SettingsToolStripMenuItem_Click);
-            // 
             // buttonSavePreset
             // 
             this.buttonSavePreset.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -2958,11 +2959,20 @@
             this.buttonLoadPreset.UseVisualStyleBackColor = true;
             this.buttonLoadPreset.Click += new System.EventHandler(this.ButtonLoadPreset_Click);
             // 
+            // comboBoxPresets
+            // 
+            this.comboBoxPresets.FormattingEnabled = true;
+            this.comboBoxPresets.Location = new System.Drawing.Point(920, 31);
+            this.comboBoxPresets.Name = "comboBoxPresets";
+            this.comboBoxPresets.Size = new System.Drawing.Size(298, 21);
+            this.comboBoxPresets.TabIndex = 226;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1234, 758);
+            this.Controls.Add(this.comboBoxPresets);
             this.Controls.Add(this.buttonLoadPreset);
             this.Controls.Add(this.buttonSavePreset);
             this.Controls.Add(this.tabControl);
@@ -3258,6 +3268,7 @@
         private System.Windows.Forms.ToolStripMenuItem optionsToolStripMenuItem;
         private System.Windows.Forms.Button buttonSavePreset;
         private System.Windows.Forms.Button buttonLoadPreset;
+        private System.Windows.Forms.ComboBox comboBoxPresets;
     }
 }
 
