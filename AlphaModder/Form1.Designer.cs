@@ -280,6 +280,8 @@
             this.buttonSavePreset = new System.Windows.Forms.Button();
             this.buttonLoadPreset = new System.Windows.Forms.Button();
             this.comboBoxPresets = new System.Windows.Forms.ComboBox();
+            this.buttonRestoreDefaults = new System.Windows.Forms.Button();
+            this.buttonDeletePreset = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarTerraformingRate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarDroneRiots)).BeginInit();
@@ -2939,10 +2941,10 @@
             // 
             // buttonSavePreset
             // 
-            this.buttonSavePreset.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSavePreset.Location = new System.Drawing.Point(750, 31);
+            this.buttonSavePreset.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSavePreset.Location = new System.Drawing.Point(970, 27);
             this.buttonSavePreset.Name = "buttonSavePreset";
-            this.buttonSavePreset.Size = new System.Drawing.Size(133, 40);
+            this.buttonSavePreset.Size = new System.Drawing.Size(80, 44);
             this.buttonSavePreset.TabIndex = 224;
             this.buttonSavePreset.Text = "Save Preset";
             this.buttonSavePreset.UseVisualStyleBackColor = true;
@@ -2950,10 +2952,10 @@
             // 
             // buttonLoadPreset
             // 
-            this.buttonLoadPreset.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonLoadPreset.Location = new System.Drawing.Point(750, 77);
+            this.buttonLoadPreset.Font = new System.Drawing.Font("Consolas", 9.75F);
+            this.buttonLoadPreset.Location = new System.Drawing.Point(884, 27);
             this.buttonLoadPreset.Name = "buttonLoadPreset";
-            this.buttonLoadPreset.Size = new System.Drawing.Size(133, 40);
+            this.buttonLoadPreset.Size = new System.Drawing.Size(80, 44);
             this.buttonLoadPreset.TabIndex = 225;
             this.buttonLoadPreset.Text = "Load Preset";
             this.buttonLoadPreset.UseVisualStyleBackColor = true;
@@ -2962,16 +2964,39 @@
             // comboBoxPresets
             // 
             this.comboBoxPresets.FormattingEnabled = true;
-            this.comboBoxPresets.Location = new System.Drawing.Point(920, 31);
+            this.comboBoxPresets.Location = new System.Drawing.Point(884, 77);
             this.comboBoxPresets.Name = "comboBoxPresets";
-            this.comboBoxPresets.Size = new System.Drawing.Size(298, 21);
+            this.comboBoxPresets.Size = new System.Drawing.Size(338, 21);
             this.comboBoxPresets.TabIndex = 226;
+            // 
+            // buttonRestoreDefaults
+            // 
+            this.buttonRestoreDefaults.Font = new System.Drawing.Font("Consolas", 9.75F);
+            this.buttonRestoreDefaults.Location = new System.Drawing.Point(1056, 27);
+            this.buttonRestoreDefaults.Name = "buttonRestoreDefaults";
+            this.buttonRestoreDefaults.Size = new System.Drawing.Size(80, 44);
+            this.buttonRestoreDefaults.TabIndex = 227;
+            this.buttonRestoreDefaults.Text = "Restore Defaults";
+            this.buttonRestoreDefaults.UseVisualStyleBackColor = true;
+            this.buttonRestoreDefaults.Click += new System.EventHandler(this.ButtonRestoreDefaults_Click);
+            // 
+            // buttonDeletePreset
+            // 
+            this.buttonDeletePreset.Font = new System.Drawing.Font("Consolas", 9.75F);
+            this.buttonDeletePreset.Location = new System.Drawing.Point(1142, 27);
+            this.buttonDeletePreset.Name = "buttonDeletePreset";
+            this.buttonDeletePreset.Size = new System.Drawing.Size(80, 44);
+            this.buttonDeletePreset.TabIndex = 228;
+            this.buttonDeletePreset.Text = "Delete Preset";
+            this.buttonDeletePreset.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1234, 758);
+            this.Controls.Add(this.buttonDeletePreset);
+            this.Controls.Add(this.buttonRestoreDefaults);
             this.Controls.Add(this.comboBoxPresets);
             this.Controls.Add(this.buttonLoadPreset);
             this.Controls.Add(this.buttonSavePreset);
@@ -3269,6 +3294,8 @@
         private System.Windows.Forms.Button buttonSavePreset;
         private System.Windows.Forms.Button buttonLoadPreset;
         private System.Windows.Forms.ComboBox comboBoxPresets;
+        private System.Windows.Forms.Button buttonRestoreDefaults;
+        private System.Windows.Forms.Button buttonDeletePreset;
     }
 }
 

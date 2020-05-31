@@ -1079,5 +1079,11 @@ namespace AlphaModder
                 comboBoxPresets.Items.Add(presetName);
             }
         }
+
+        private void ButtonRestoreDefaults_Click(object sender, EventArgs e)
+        {
+            loadPresetToControls(AlphaModderConstants.DEFAULT_CONFIG_PRESET_NAME);
+            refreshPresetsDropdown();
+        }
     }
 }

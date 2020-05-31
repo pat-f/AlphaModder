@@ -28,5 +28,7 @@ namespace AlphaModder.Constants
         public const String ALPHA_FILENAME = "alpha.txt";
         public const String ALPHA_X_FILENAME = "alphax.txt";
         public const String ALPHA_CENTAURI_INI_FILENAME = "Alpha Centauri.Ini";
+
+        public const String DEFAULT_CONFIG_PRESET_NAME = "DefaultConfigPreset";
     }
 }
