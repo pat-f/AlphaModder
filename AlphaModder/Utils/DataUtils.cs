@@ -72,20 +72,46 @@ namespace AlphaModder.Utils
 
         }
 
+        public static String getPresetsDirectoryStr()
+        {
+            return Properties.Settings.Default.GameFolder + AlphaModderConstants.PRESETS_FOLDER_RELATIVE_PATH;
+        }
+
+        public static bool checkPresetExists(String presetName)
+        {
+            return File.Exists(getPresetsDirectoryStr() + presetName + ".json");
+        }
+
+        public static String getPresetAbsolutePath(String presetName)
+        {
+            return getPresetsDirectoryStr() + presetName + ".json";
+        }
+
         // save preset json file
         // todo - refactor this
         public static bool savePresetJsonFile(String jsonString, String presetName)
         {
-            String directory = Properties.Settings.Default.GameFolder + AlphaModderConstants.PRESETS_FOLDER_RELATIVE_PATH;
-            Directory.CreateDirectory(directory);
-            File.WriteAllText(directory + presetName + ".json", jsonString);
+            if (checkPresetExists(presetName))
+            {
+                if(DialogUtils.messageBoxOkCancel("Preset \"" + presetName + "\" already exists. Overwrite?"))
+                {
+                    String directory = getPresetsDirectoryStr();
+                    Directory.CreateDirectory(directory);
+                    File.WriteAllText(directory + presetName + ".json", jsonString);
+                }
+            }
+            
             return true;
         }
 
         public static string getPresetAsJsonString(String presetName)
         {
-            String presetAbsolutePath = Properties.Settings.Default.GameFolder + AlphaModderConstants.PRESETS_FOLDER_RELATIVE_PATH + presetName + ".json";
-            return File.ReadAllText(presetAbsolutePath);
+            if (!checkPresetExists(presetName))
+            {
+                DialogUtils.messageBox("Unable to load preset: \n\n" + getPresetsDirectoryStr() + presetName + ".json\n\nThe file could not be found.");
+                return "{ }"; // return an empty json object string
+            }
+            return File.ReadAllText(getPresetAbsolutePath(presetName));
         }
 
         public static List<string> getPresetsList()
