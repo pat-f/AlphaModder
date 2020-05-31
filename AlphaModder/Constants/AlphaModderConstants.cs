@@ -23,5 +23,10 @@ namespace AlphaModder.Constants
         public const String TRIAD_2_AIR = "2";
 
         public const String ERROR_GAME_FOLDER_NOT_FOUND = "No game folder was found.  Please configure it in the Tools menu.";
+
+        public const String APP_DATA_RELATIVE_PATH = "/AlphaModderData/";
+        public const String ALPHA_FILENAME = "alpha.txt";
+        public const String ALPHA_X_FILENAME = "alphax.txt";
+        public const String ALPHA_CENTAURI_INI_FILENAME = "Alpha Centauri.Ini";
     }
 }

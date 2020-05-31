@@ -969,5 +969,54 @@ namespace AlphaModder
         {
             Properties.Settings.Default.Save();
         }
+
+        // iterate thru controls for each tab.  depending on the control type, 
+        // save the control's name and value to the json string
+        private String buildPresetJson()
+        {
+            StringBuilder presetJsonBuilder = new StringBuilder();
+            
+            // append { to start the json file
+            presetJsonBuilder.Append(@"{
+""firstKey"" : ""firstValue""");
+
+            // iterate thru each tab and it's controls
+            foreach(TabPage tabPage in this.tabControl.Controls)
+            {
+                foreach(Control control in tabPage.Controls)
+                {
+                    if((control is TrackBar) || (control is CheckBox) || (control is NumericUpDown)){
+                        presetJsonBuilder.Append(@",
+""" + control.Name);
+                        presetJsonBuilder.Append("\": " + getControlStateString(control));
+                    }
+                }
+            }
+
+
+            // append } to end the json file
+            presetJsonBuilder.Append(@",
+""lastKey"" : ""lastValue""
+}");
+            MessageBox.Show(presetJsonBuilder.ToString());
+            return presetJsonBuilder.ToString();
+        }
+
+        private string getControlStateString(Control control)
+        {
+            if (control is TrackBar)
+            {
+                return ((TrackBar)control).Value.ToString();
+            }
+            else if(control is CheckBox)
+            {
+                return ((CheckBox)control).Checked.ToString().ToLower();
+            }
+            else if(control is NumericUpDown)
+            {
+                ((NumericUpDown)control).Value.ToString();
+            }
+            return "";
+        }
     }
 }
