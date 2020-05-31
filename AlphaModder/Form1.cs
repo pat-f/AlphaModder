@@ -1024,22 +1024,25 @@ namespace AlphaModder
         private void loadPresetToControls(String presetName)
         {
             String jsonString = DataUtils.getPresetAsJsonString(presetName);
+            JObject jsonObject = JObject.Parse(jsonString);
 
             // iterate thru each tab and it's controls
             foreach(TabPage tabPage in this.tabControl.Controls)
             {
                 foreach(Control control in tabPage.Controls)
                 {
+                    // if the control is one we need, look up its value in the json
+                    // using the control's name as the key.  Set the value to the control
                     if((control is TrackBar) || (control is CheckBox) || (control is NumericUpDown)){
-                        String controlState = "";
-                        JObject jsonObject = JObject.Parse(jsonString);
-                        controlState = (String)jsonObject[control.Name];
+                        String controlState = (String)jsonObject[control.Name];
                         setControlState(control, controlState);
                     }
                 }
             }
         }
 
+        // parse the String value from the json to the appropriate type for the control
+        // and set it to the control
         private void setControlState(Control control, String state)
         {
             if (control is TrackBar)
@@ -1048,7 +1051,6 @@ namespace AlphaModder
             }
             else if (control is CheckBox)
             {
-                // first letter for bools is capitalized, json wants all lowercase
                 ((CheckBox)control).Checked = Boolean.Parse(state);
             }
             else if (control is NumericUpDown)

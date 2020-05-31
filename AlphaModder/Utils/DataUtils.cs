@@ -47,7 +47,7 @@ namespace AlphaModder.Utils
         // save preset json file
         public static bool savePresetJsonFile(String jsonString)
         {
-            String directory = Properties.Settings.Default.GameFolder + AlphaModderConstants.APP_DATA_RELATIVE_PATH;
+            String directory = Properties.Settings.Default.GameFolder + AlphaModderConstants.PRESETS_FOLDER_RELATIVE_PATH;
             Directory.CreateDirectory(directory);
             File.WriteAllText(directory + "testfile2.json", jsonString);
             return true;
@@ -83,7 +83,7 @@ namespace AlphaModder.Utils
 
         public static string getPresetAsJsonString(String presetName)
         {
-            String presetAbsolutePath = Properties.Settings.Default.GameFolder + AlphaModderConstants.APP_DATA_RELATIVE_PATH + presetName + ".json";
+            String presetAbsolutePath = Properties.Settings.Default.GameFolder + AlphaModderConstants.PRESETS_FOLDER_RELATIVE_PATH + presetName + ".json";
             return File.ReadAllText(presetAbsolutePath);
         }
 
