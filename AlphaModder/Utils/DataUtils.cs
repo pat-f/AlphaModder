@@ -44,6 +44,15 @@ namespace AlphaModder.Utils
             return false;
         }
 
+        // save preset json file
+        public static bool savePresetJsonFile(String jsonString)
+        {
+            String directory = Properties.Settings.Default.GameFolder + AlphaModderConstants.APP_DATA_RELATIVE_PATH;
+            Directory.CreateDirectory(directory);
+            File.WriteAllText(directory + "testfile2.json", jsonString);
+            return true;
+        }
+
         // sets the game resolution by rewriting the Alpha Centauri.ini file
         // with DirectDraw=0 for hi res and DirectDraw=1 for lo res
         public static void setResolution(bool highRes)
@@ -70,6 +79,12 @@ namespace AlphaModder.Utils
             // save the file
             File.WriteAllText(Properties.Settings.Default.AlphaCentauriIniPath, iniStringBuilder.ToString());
 
+        }
+
+        public static string getPresetAsJsonString(String presetName)
+        {
+            String presetAbsolutePath = Properties.Settings.Default.GameFolder + AlphaModderConstants.APP_DATA_RELATIVE_PATH + presetName + ".json";
+            return File.ReadAllText(presetAbsolutePath);
         }
 
         private static String getAlphaFileString(AlphaConfiguration alphaConfiguration)

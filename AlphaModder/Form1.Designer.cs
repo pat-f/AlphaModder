@@ -277,6 +277,8 @@
             this.tabPageFacilities = new System.Windows.Forms.TabPage();
             this.label72 = new System.Windows.Forms.Label();
             this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.buttonSavePreset = new System.Windows.Forms.Button();
+            this.buttonLoadPreset = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarTerraformingRate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarDroneRiots)).BeginInit();
@@ -2934,11 +2936,35 @@
             this.optionsToolStripMenuItem.Text = "Options";
             this.optionsToolStripMenuItem.Click += new System.EventHandler(this.SettingsToolStripMenuItem_Click);
             // 
+            // buttonSavePreset
+            // 
+            this.buttonSavePreset.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSavePreset.Location = new System.Drawing.Point(750, 31);
+            this.buttonSavePreset.Name = "buttonSavePreset";
+            this.buttonSavePreset.Size = new System.Drawing.Size(133, 40);
+            this.buttonSavePreset.TabIndex = 224;
+            this.buttonSavePreset.Text = "Save Preset";
+            this.buttonSavePreset.UseVisualStyleBackColor = true;
+            this.buttonSavePreset.Click += new System.EventHandler(this.ButtonSavePreset_Click);
+            // 
+            // buttonLoadPreset
+            // 
+            this.buttonLoadPreset.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonLoadPreset.Location = new System.Drawing.Point(750, 77);
+            this.buttonLoadPreset.Name = "buttonLoadPreset";
+            this.buttonLoadPreset.Size = new System.Drawing.Size(133, 40);
+            this.buttonLoadPreset.TabIndex = 225;
+            this.buttonLoadPreset.Text = "Load Preset";
+            this.buttonLoadPreset.UseVisualStyleBackColor = true;
+            this.buttonLoadPreset.Click += new System.EventHandler(this.ButtonLoadPreset_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1234, 758);
+            this.Controls.Add(this.buttonLoadPreset);
+            this.Controls.Add(this.buttonSavePreset);
             this.Controls.Add(this.tabControl);
             this.Controls.Add(this.buttonSave);
             this.Controls.Add(this.labelGameFolder);
@@ -3230,6 +3256,8 @@
         private System.Windows.Forms.Label label71;
         private System.Windows.Forms.Label label73;
         private System.Windows.Forms.ToolStripMenuItem optionsToolStripMenuItem;
+        private System.Windows.Forms.Button buttonSavePreset;
+        private System.Windows.Forms.Button buttonLoadPreset;
     }
 }
 

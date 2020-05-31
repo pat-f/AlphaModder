@@ -1,6 +1,7 @@
 ﻿using AlphaModder.Constants;
 using AlphaModder.Model;
 using AlphaModder.Utils;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -978,7 +979,7 @@ namespace AlphaModder
             
             // append { to start the json file
             presetJsonBuilder.Append(@"{
-""firstKey"" : ""firstValue""");
+""presetName"" : ""todo - set preset name""");
 
             // iterate thru each tab and it's controls
             foreach(TabPage tabPage in this.tabControl.Controls)
@@ -988,7 +989,7 @@ namespace AlphaModder
                     if((control is TrackBar) || (control is CheckBox) || (control is NumericUpDown)){
                         presetJsonBuilder.Append(@",
 """ + control.Name);
-                        presetJsonBuilder.Append("\": " + getControlStateString(control));
+                        presetJsonBuilder.Append("\": \"" + getControlStateString(control) + "\"");
                     }
                 }
             }
@@ -996,27 +997,74 @@ namespace AlphaModder
 
             // append } to end the json file
             presetJsonBuilder.Append(@",
-""lastKey"" : ""lastValue""
+""appVersion"" : ""todo - set app version""
 }");
-            MessageBox.Show(presetJsonBuilder.ToString());
             return presetJsonBuilder.ToString();
         }
 
+        // provide a control, get it's state as a string for use in json
         private string getControlStateString(Control control)
         {
             if (control is TrackBar)
             {
                 return ((TrackBar)control).Value.ToString();
             }
-            else if(control is CheckBox)
+            else if (control is CheckBox)
             {
-                return ((CheckBox)control).Checked.ToString().ToLower();
+                // first letter for bools is capitalized, json wants all lowercase
+                return ((CheckBox)control).Checked.ToString();
             }
-            else if(control is NumericUpDown)
+            else if (control is NumericUpDown)
             {
-                ((NumericUpDown)control).Value.ToString();
+                return ((NumericUpDown)control).Value.ToString();
             }
             return "";
+        }
+
+        private void loadPresetToControls(String presetName)
+        {
+            String jsonString = DataUtils.getPresetAsJsonString(presetName);
+
+            // iterate thru each tab and it's controls
+            foreach(TabPage tabPage in this.tabControl.Controls)
+            {
+                foreach(Control control in tabPage.Controls)
+                {
+                    if((control is TrackBar) || (control is CheckBox) || (control is NumericUpDown)){
+                        String controlState = "";
+                        JObject jsonObject = JObject.Parse(jsonString);
+                        controlState = (String)jsonObject[control.Name];
+                        setControlState(control, controlState);
+                    }
+                }
+            }
+        }
+
+        private void setControlState(Control control, String state)
+        {
+            if (control is TrackBar)
+            {
+                ((TrackBar)control).Value = Int32.Parse(state);
+            }
+            else if (control is CheckBox)
+            {
+                // first letter for bools is capitalized, json wants all lowercase
+                ((CheckBox)control).Checked = Boolean.Parse(state);
+            }
+            else if (control is NumericUpDown)
+            {
+                ((NumericUpDown)control).Value = Int32.Parse(state);
+            }
+        }
+
+        private void ButtonSavePreset_Click(object sender, EventArgs e)
+        {
+            DataUtils.savePresetJsonFile(buildPresetJson());
+        }
+
+        private void ButtonLoadPreset_Click(object sender, EventArgs e)
+        {
+            loadPresetToControls("testfile2");
         }
     }
 }
