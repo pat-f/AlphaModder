@@ -1058,7 +1058,9 @@ namespace AlphaModder
 
         private void ButtonSavePreset_Click(object sender, EventArgs e)
         {
-            DataUtils.savePresetJsonFile(buildPresetJson(comboBoxPresets.Text), comboBoxPresets.Text);
+            String selectedPresetName = comboBoxPresets.Text;
+            String presetJson = buildPresetJson(selectedPresetName);
+            DataUtils.savePresetJsonFile(presetJson, selectedPresetName);
             refreshPresetsDropdown();
         }
 

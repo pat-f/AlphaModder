@@ -72,6 +72,11 @@ namespace AlphaModder.Utils
 
         }
 
+        public static String getGameInstallationDirectoryStr()
+        {
+            return Properties.Settings.Default.GameFolder;
+        }
+
         public static String getPresetsDirectoryStr()
         {
             return Properties.Settings.Default.GameFolder + AlphaModderConstants.PRESETS_FOLDER_RELATIVE_PATH;
@@ -79,7 +84,7 @@ namespace AlphaModder.Utils
 
         public static bool checkPresetExists(String presetName)
         {
-            return File.Exists(getPresetsDirectoryStr() + presetName + ".json");
+            return File.Exists(getPresetAbsolutePath(presetName));
         }
 
         public static String getPresetAbsolutePath(String presetName)
@@ -93,6 +98,7 @@ namespace AlphaModder.Utils
         {
             if (checkPresetExists(presetName))
             {
+                // if the user clicks Cancel or Close, do nothing.
                 if(!DialogUtils.messageBoxOkCancel("Preset \"" + presetName + "\" already exists. Overwrite?"))
                 {
                     return false;

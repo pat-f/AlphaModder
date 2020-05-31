@@ -104,7 +104,7 @@ namespace AlphaModder.Utils
                 // if the enable sounds option is enabled,
                 // get the path of the game directory and combine it with the relative path
                 // of the sound file
-                String absolutePath = Properties.Settings.Default.GameFolder + relativePath;
+                String absolutePath = DataUtils.getGameInstallationDirectoryStr() + relativePath;
                 System.Media.SoundPlayer soundPlayer = new System.Media.SoundPlayer(absolutePath);
                 soundPlayer.Play();
             }
