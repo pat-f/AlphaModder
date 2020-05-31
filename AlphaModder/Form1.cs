@@ -974,13 +974,12 @@ namespace AlphaModder
 
         // iterate thru controls for each tab.  depending on the control type, 
         // save the control's name and value to the json string
-        private String buildPresetJson()
+        private String buildPresetJson(String presetName)
         {
             StringBuilder presetJsonBuilder = new StringBuilder();
             
-            // append { to start the json file
-            presetJsonBuilder.Append(@"{
-""presetName"" : ""todo - set preset name""");
+            // append { and the preset name to start the json file
+            presetJsonBuilder.Append("{\n\"presetName\": \"" + presetName + "\"");
 
             // iterate thru each tab and it's controls
             foreach(TabPage tabPage in this.tabControl.Controls)
@@ -995,11 +994,8 @@ namespace AlphaModder
                 }
             }
 
-
-            // append } to end the json file
-            presetJsonBuilder.Append(@",
-""appVersion"" : ""todo - set app version""
-}");
+            // append the version and } to end the json file
+            presetJsonBuilder.Append(",\n\"appVersion\": \"" + AlphaModderConstants.VERSION + "\"\n}");
             return presetJsonBuilder.ToString();
         }
 
@@ -1062,7 +1058,7 @@ namespace AlphaModder
 
         private void ButtonSavePreset_Click(object sender, EventArgs e)
         {
-            DataUtils.savePresetJsonFile(buildPresetJson(), comboBoxPresets.Text);
+            DataUtils.savePresetJsonFile(buildPresetJson(comboBoxPresets.Text), comboBoxPresets.Text);
             refreshPresetsDropdown();
         }
 

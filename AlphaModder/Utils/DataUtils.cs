@@ -93,13 +93,15 @@ namespace AlphaModder.Utils
         {
             if (checkPresetExists(presetName))
             {
-                if(DialogUtils.messageBoxOkCancel("Preset \"" + presetName + "\" already exists. Overwrite?"))
+                if(!DialogUtils.messageBoxOkCancel("Preset \"" + presetName + "\" already exists. Overwrite?"))
                 {
-                    String directory = getPresetsDirectoryStr();
-                    Directory.CreateDirectory(directory);
-                    File.WriteAllText(directory + presetName + ".json", jsonString);
+                    return false;
                 }
             }
+
+            String directory = getPresetsDirectoryStr();
+            Directory.CreateDirectory(directory);
+            File.WriteAllText(getPresetAbsolutePath(presetName), jsonString);
             
             return true;
         }
@@ -108,7 +110,7 @@ namespace AlphaModder.Utils
         {
             if (!checkPresetExists(presetName))
             {
-                DialogUtils.messageBox("Unable to load preset: \n\n" + getPresetsDirectoryStr() + presetName + ".json\n\nThe file could not be found.");
+                DialogUtils.messageBox("Unable to load preset: \n\n" + getPresetAbsolutePath(presetName) + "\n\nThe file could not be found.");
                 return "{ }"; // return an empty json object string
             }
             return File.ReadAllText(getPresetAbsolutePath(presetName));
@@ -116,7 +118,7 @@ namespace AlphaModder.Utils
 
         public static List<string> getPresetsList()
         {
-            String presetsFolder = Properties.Settings.Default.GameFolder + AlphaModderConstants.PRESETS_FOLDER_RELATIVE_PATH;
+            String presetsFolder = getPresetsDirectoryStr();
             Directory.CreateDirectory(presetsFolder);
 
             DirectoryInfo directoryInfo = new DirectoryInfo(presetsFolder);
