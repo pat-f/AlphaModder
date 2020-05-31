@@ -73,6 +73,7 @@
             this.Controls.Add(this.checkBoxEnableSounds);
             this.Name = "OptionsScreen";
             this.Text = "Options";
+            this.Load += new System.EventHandler(this.OptionsScreen_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

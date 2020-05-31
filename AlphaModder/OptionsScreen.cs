@@ -35,5 +35,11 @@ namespace AlphaModder
         {
             this.Close();
         }
+
+        // when the page loads, update the controls with the related setting
+        private void OptionsScreen_Load(object sender, EventArgs e)
+        {
+            checkBoxEnableSounds.Checked = Properties.Settings.Default.EnableSounds;
+        }
     }
 }
