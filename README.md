@@ -12,10 +12,10 @@ A tool for generating custom alpha.txt settings files for the game Sid Meier's A
 * Automatically finds your game installation folder.
 * Adjust the game's resolution.
 * Hurry cost calculator that tells you how many energy credits to pay to complete production next turn.
-* 
+* Save and load presets.
 
 // todo add links
-Please review the Issues and Milestones to see what features are planned for future versions.
+Please review the Issues and Milestones to see what features are planned for future versions.  Issuses that are assigned are being worked on.  
 
 ## Download and run the application:
 // todo add links
