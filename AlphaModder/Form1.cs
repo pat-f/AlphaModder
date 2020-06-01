@@ -80,6 +80,7 @@ namespace AlphaModder
 
         private void ButtonSave_Click(object sender, EventArgs e)
         {
+            MessageBox.Show(textBoxDescription.Text);
             String applyMessage = "alpha.txt and alphax.txt will be overwritten with the selected settings.";
             DialogResult dialogResult = MessageBox.Show(applyMessage, "Apply Modifications", MessageBoxButtons.OKCancel);
             if (dialogResult == DialogResult.Cancel)
@@ -120,78 +121,8 @@ namespace AlphaModder
         {
             AlphaConfiguration alphaConfiguration = new AlphaConfiguration();
 
-#region DISABLED CHECKBOXES
-
-            //if (checkBoxFastTerraforming.Checked)
-            //{
-            //    alphaConfiguration.terraformFarmRate
-            //    = alphaConfiguration.terraformSoilEnricherRate
-            //    = alphaConfiguration.terraformMineRate
-            //    = alphaConfiguration.terraformSolarCollectorRate
-            //    = alphaConfiguration.terraformForrestRate
-            //    = alphaConfiguration.terraformRoadRate 
-            //    = alphaConfiguration.terraformMagTubeRate 
-            //    = alphaConfiguration.terraformBunkerRate
-            //    = alphaConfiguration.terraformAirbaseRate
-            //    = alphaConfiguration.terraformSensorArrayRate
-            //    = alphaConfiguration.terraformRemoveFungusRate
-            //    = alphaConfiguration.terraformPlantFungusRate
-            //    = alphaConfiguration.terraformCondenserRate
-            //    = alphaConfiguration.terraformEchelonMirrorRate
-            //    = alphaConfiguration.terraformBoreholeRate
-            //    = alphaConfiguration.terraformAquiferRate
-            //    = alphaConfiguration.terraformRaiseLandRate
-            //    = alphaConfiguration.terraformLowerLandRate
-            //    = alphaConfiguration.terraformLevelRate
-            //    = "1";
-            //}
-
-            //if (checkBoxEasyDrones.Checked)
-            //{
-            //    // free rec commons, hologram theatre, paradise garden, punishment sphere
-            //    alphaConfiguration.facilityRecCommonsCost
-            //    = alphaConfiguration.facilityRecCommonsMaint
-            //    = alphaConfiguration.facilityParadiseGardenCost
-            //    = alphaConfiguration.facilityParadiseGardenMaint
-            //    = alphaConfiguration.facilityHologramTheatreCost
-            //    = alphaConfiguration.facilityHologramTheatreMaint
-            //    = alphaConfiguration.facilityPunishmentSphereCost
-            //    = alphaConfiguration.facilityPunishmentSphereMaint
-            //    = "0";
-            //    // police special ability prereq none and no cost
-            //    alphaConfiguration.abilityNonLethalMethodsPoliceCost = "0";
-            //    alphaConfiguration.abilityNonLethalMethodsPolicePrereq = Techs.NONE;
-            //}
-
-            //if (checkBoxDisablePopulationLimits.Checked)
-            //{
-            //    alphaConfiguration.rulePopLimitWithoutHabComplex = "9999";
-            //    alphaConfiguration.rulePopLimitWithoutHabDome = "9999";
-            //    // TODO disable hab complex and hab dome facilities
-            //}
-
-            //if (checkBoxEasyMindworms.Checked)
-            //{
-            //    // attack / defense ratio
-            //    // disbale building native life
-            //    // empath and trance special abilities bonus percent
-            //    alphaConfiguration.generalEmpathAttackBonus = "500";
-            //    alphaConfiguration.generalTranceDefenseBonus = "500";
-            //    // empath and trance spec abilities - no prereq, no cost
-            //    alphaConfiguration.abilityEmpathSongCost = "0";
-            //    alphaConfiguration.abilityTranceCost = "0";
-            //    alphaConfiguration.abilityEmpathSongPrereq = Techs.NONE;
-            //    alphaConfiguration.abilityTrancePrereq = Techs.NONE;
-            //    // disable psi defense
-            //    alphaConfiguration.defensePsiDefensePrereq = Techs.DISABLE;
-            //}
-
-            //if (checkBoxEasyFungus.Checked)
-            //{
-            //    // TODO implement easy fungus
-            //}
-
-            #endregion
+            // get the json string
+            alphaConfiguration.configJson = buildPresetJson("AlphaFilePresetName", true); // true = include semicolons
 
 #region General tab sliders
 
@@ -313,7 +244,6 @@ namespace AlphaModder
 
             if (trackBarNativeLife.Value == 1)
             {
-                // TODO implement native life 1
                 // empath and trance special abilities double effectiveness
                 // Empath Song and Hypnotic Trance abilities unlocked, cost 1, and double attack/defense bonus. Native life units and psi attack/defense disabled.
                 alphaConfiguration.generalEmpathAttackBonus = "100";
@@ -360,7 +290,6 @@ namespace AlphaModder
             if (trackBarFungus.Value == 1)
             {
                 // Easy - Double fungus removal speed, Fungicide Tanks ability unlocked, unlock build roads on fungus and ease fungus movement.
-                // TODO implement fungus 1
                 // remove fungus double speed (3 turns)
                 alphaConfiguration.terraformRemoveFungusRate = "3";
                 // earlier cheaper fungicide tanks
@@ -536,10 +465,6 @@ namespace AlphaModder
 
             // turns between council meetings
             alphaConfiguration.minTurnsBetweenCouncils = numTurnsBetweenCouncils.Value.ToString();
-
-            // TODO all reactors available / just singularity available
-
-            // TODO reactor power adjust
 
             #endregion Misc tab
 
@@ -869,9 +794,9 @@ namespace AlphaModder
             if (trackBarPopulationLimits.Value == 0)
                 labelPopulationLimits.Text = "Standard";
             else if (trackBarPopulationLimits.Value == 1)
-                labelPopulationLimits.Text = "Relaxed - Population limit without Hab Complex: 11, without Habitation Dome: 18.  Both are half cost.  Hab Complex unlocked, Habitation Dome prerequisite: Industrial Automation."; //TODO update this text
+                labelPopulationLimits.Text = "Relaxed - Population limit without Hab Complex: 11, without Habitation Dome: 18.  Both are half cost.  Hab Complex unlocked, Habitation Dome prerequisite: Industrial Automation.";
             else if (trackBarPopulationLimits.Value == 2)
-                labelPopulationLimits.Text = "Unlimited - Hab Complex and Habitation Dome disabled."; //TODO update this text
+                labelPopulationLimits.Text = "Unlimited - Hab Complex and Habitation Dome disabled.";
         }
 
         private void TrackBarHugePlanetSize_Scroll(object sender, EventArgs e)
@@ -974,28 +899,34 @@ namespace AlphaModder
 
         // iterate thru controls for each tab.  depending on the control type, 
         // save the control's name and value to the json string
-        private String buildPresetJson(String presetName)
+        private String buildPresetJson(String presetName, bool semicolons)
         {
             StringBuilder presetJsonBuilder = new StringBuilder();
             
             // append { and the preset name to start the json file
-            presetJsonBuilder.Append("{\n\"presetName\": \"" + presetName + "\"");
-
+            if (semicolons) presetJsonBuilder.Append(";");
+            presetJsonBuilder.Append("{\n");
+            if (semicolons) presetJsonBuilder.Append(";");
+            presetJsonBuilder.Append("\"presetName\": \"" + presetName + "\"");
             // iterate thru each tab and it's controls
             foreach(TabPage tabPage in this.tabControl.Controls)
             {
                 foreach(Control control in tabPage.Controls)
                 {
                     if((control is TrackBar) || (control is CheckBox) || (control is NumericUpDown)){
-                        presetJsonBuilder.Append(@",
-""" + control.Name);
-                        presetJsonBuilder.Append("\": \"" + getControlStateString(control) + "\"");
+                        presetJsonBuilder.Append(",\n");
+                        if (semicolons) presetJsonBuilder.Append(";");
+                        presetJsonBuilder.Append("\"" + control.Name + "\": \"" + getControlStateString(control) + "\"");
                     }
                 }
             }
 
             // append the version and } to end the json file
-            presetJsonBuilder.Append(",\n\"appVersion\": \"" + AlphaModderConstants.VERSION + "\"\n}");
+            presetJsonBuilder.Append(",\n");
+            if (semicolons) presetJsonBuilder.Append(";");
+            presetJsonBuilder.Append("\"appVersion\": \"" + AlphaModderConstants.VERSION + "\"\n");
+            if (semicolons) presetJsonBuilder.Append(";");
+            presetJsonBuilder.Append("}");
             return presetJsonBuilder.ToString();
         }
 
@@ -1059,7 +990,7 @@ namespace AlphaModder
         private void ButtonSavePreset_Click(object sender, EventArgs e)
         {
             String selectedPresetName = comboBoxPresets.Text;
-            String presetJson = buildPresetJson(selectedPresetName);
+            String presetJson = buildPresetJson(selectedPresetName, false); // false - no semicolons
             DataUtils.savePresetJsonFile(presetJson, selectedPresetName);
             refreshPresetsDropdown();
         }

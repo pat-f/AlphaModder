@@ -10,6 +10,8 @@ namespace AlphaModder.Model
     class AlphaConfiguration
     {
         public bool isAlphax { get; set; } = false;
+
+        public String configJson { get; set; } = ";";
         public String planetSizeHugeX { get; set; } = "128";
         public String planetSizeHugeY { get; set; } = "64";
 
@@ -503,8 +505,6 @@ namespace AlphaModder.Model
             return "Orbital Defense Pod,          " + facilityOrbitalDefensePodCost + ", " + facilityOrbitalDefensePodMaint + ", " + facilityOrbitalDefensePodPrereq + ", Disable,  Missile Defense";
         }
 
-        // TODO secret projects
-
         public String ruleAAABonusPct { get; set; } = "100";
         public String getRuleAAABonusPctLineStr()
         {
@@ -673,8 +673,6 @@ namespace AlphaModder.Model
             return "Singularity Engine,   Singularity, " + reactorSingularityPower + ", " + reactorSingularityPrereq + ",";
         }
 
-        // todo weapons
-
         public String weaponPsiAttackPower { get; set; } = "-1";
         public String weaponPsiAttackCost { get; set; } = "10";
         public String weaponPsiAttackPrereq { get; set; } = "CentPsi";
@@ -707,7 +705,6 @@ namespace AlphaModder.Model
             return "Terraforming Unit,    Formers,        " + weaponTerraformingUnitPower + ", 9, " + weaponTerraformingUnitCost + ", -1, " + weaponTerraformingUnitPrereq + ",";
         }
 
-        // todo terraforming unit
         public String weaponTransportPower { get; set; } = "0";
         public String weaponTransportCost { get; set; } = "4";
         public String weaponTransportPrereq { get; set; } = "DocFlex";
@@ -731,7 +728,6 @@ namespace AlphaModder.Model
         {
             return "Conventional Payload, Conventional,  " + weaponConventionalPayloadPower + ", 0," + weaponConventionalPayloadCost + ", -1, " + weaponConventionalPayloadPrereq + ",";
         }
-        // todo armors
 
         public String defensePsiDefensePower { get; set; } = "-1";
         public String defensePsiDefenseCost { get; set; } = "6";
@@ -740,8 +736,6 @@ namespace AlphaModder.Model
         {
             return "Psi Defense,         Psi,        " + defensePsiDefensePower + ", 2, " + defensePsiDefenseCost + ", " + defensePsiDefensePrereq + ",";
         }
-
-        // todo abilities
 
         public String abilitySuperFormerCost { get; set; } = "1";
         public String abilitySuperFormerPrereq { get; set; } = "EcoEng2";

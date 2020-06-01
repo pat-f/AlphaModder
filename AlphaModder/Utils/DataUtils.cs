@@ -308,7 +308,9 @@ namespace AlphaModder.Utils
 
             stringBuilder.Append(
 @";
-; This file was generated with Alpha Modder version " + AlphaModderConstants.VERSION + @"
+; This file was generated with Alpha Modder version " + AlphaModderConstants.VERSION + 
+"\n" + alphaConfiguration.configJson +
+@"
 ;
 ; Sid Meier's ALPHA CENTAURI
 ;

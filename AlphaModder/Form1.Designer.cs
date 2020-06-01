@@ -282,6 +282,10 @@
             this.comboBoxPresets = new System.Windows.Forms.ComboBox();
             this.buttonRestoreDefaults = new System.Windows.Forms.Button();
             this.buttonDeletePreset = new System.Windows.Forms.Button();
+            this.label74 = new System.Windows.Forms.Label();
+            this.label75 = new System.Windows.Forms.Label();
+            this.comboBoxAlphaFiles = new System.Windows.Forms.ComboBox();
+            this.textBoxDescription = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarTerraformingRate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarDroneRiots)).BeginInit();
@@ -2990,11 +2994,52 @@
             this.buttonDeletePreset.Text = "Delete Preset";
             this.buttonDeletePreset.UseVisualStyleBackColor = true;
             // 
+            // label74
+            // 
+            this.label74.AutoSize = true;
+            this.label74.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label74.Location = new System.Drawing.Point(155, 31);
+            this.label74.Name = "label74";
+            this.label74.Size = new System.Drawing.Size(59, 20);
+            this.label74.TabIndex = 219;
+            this.label74.Text = "Name: ";
+            // 
+            // label75
+            // 
+            this.label75.AutoSize = true;
+            this.label75.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label75.Location = new System.Drawing.Point(431, 31);
+            this.label75.Name = "label75";
+            this.label75.Size = new System.Drawing.Size(88, 20);
+            this.label75.TabIndex = 229;
+            this.label75.Text = "Description:";
+            // 
+            // comboBoxAlphaFiles
+            // 
+            this.comboBoxAlphaFiles.FormattingEnabled = true;
+            this.comboBoxAlphaFiles.Location = new System.Drawing.Point(220, 33);
+            this.comboBoxAlphaFiles.Name = "comboBoxAlphaFiles";
+            this.comboBoxAlphaFiles.Size = new System.Drawing.Size(205, 21);
+            this.comboBoxAlphaFiles.TabIndex = 230;
+            // 
+            // textBoxDescription
+            // 
+            this.textBoxDescription.Location = new System.Drawing.Point(525, 33);
+            this.textBoxDescription.Multiline = true;
+            this.textBoxDescription.Name = "textBoxDescription";
+            this.textBoxDescription.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.textBoxDescription.Size = new System.Drawing.Size(353, 65);
+            this.textBoxDescription.TabIndex = 231;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1234, 758);
+            this.Controls.Add(this.textBoxDescription);
+            this.Controls.Add(this.comboBoxAlphaFiles);
+            this.Controls.Add(this.label75);
+            this.Controls.Add(this.label74);
             this.Controls.Add(this.buttonDeletePreset);
             this.Controls.Add(this.buttonRestoreDefaults);
             this.Controls.Add(this.comboBoxPresets);
@@ -3296,6 +3341,10 @@
         private System.Windows.Forms.ComboBox comboBoxPresets;
         private System.Windows.Forms.Button buttonRestoreDefaults;
         private System.Windows.Forms.Button buttonDeletePreset;
+        private System.Windows.Forms.Label label74;
+        private System.Windows.Forms.Label label75;
+        private System.Windows.Forms.ComboBox comboBoxAlphaFiles;
+        private System.Windows.Forms.TextBox textBoxDescription;
     }
 }
 
