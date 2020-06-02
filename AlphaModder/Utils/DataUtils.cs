@@ -49,11 +49,11 @@ namespace AlphaModder.Utils
         public static void setResolution(bool highRes)
         {
             // read in the Alpha Centauri.ini contents
-            List<string> ini = new List<string>(File.ReadAllLines(Properties.Settings.Default.AlphaCentauriIniPath));
+            List<String> ini = new List<String>(File.ReadAllLines(Properties.Settings.Default.AlphaCentauriIniPath));
             StringBuilder iniStringBuilder = new StringBuilder();
 
             // for each line in the contents, add it to the new ini file, but not if it's a DirectDraw setting
-            foreach(string line in ini)
+            foreach(String line in ini)
             {
                 if (!line.StartsWith("DirectDraw"))
                 {
@@ -77,9 +77,24 @@ namespace AlphaModder.Utils
             return Properties.Settings.Default.GameFolder;
         }
 
+        public static String getAlphaFileAbsolutePathStr()
+        {
+            return Properties.Settings.Default.GameFolder + AlphaModderConstants.ALPHA_FILENAME;
+        }
+
+        public static String getAlphaXFileAbsolutePathStr()
+        {
+            return Properties.Settings.Default.GameFolder + AlphaModderConstants.ALPHA_X_FILENAME;
+        }
+
         public static String getPresetsDirectoryStr()
         {
             return Properties.Settings.Default.GameFolder + AlphaModderConstants.PRESETS_FOLDER_RELATIVE_PATH;
+        }
+
+        public static String getAlphaFilesDirectoryStr()
+        {
+            return Properties.Settings.Default.GameFolder + AlphaModderConstants.ALPHA_FILES_FOLDER_RELATIVE_PATH;
         }
 
         public static bool checkPresetExists(String presetName)
@@ -112,11 +127,11 @@ namespace AlphaModder.Utils
             return true;
         }
 
-        public static string getPresetAsJsonString(String presetName)
+        public static String getPresetAsJsonString(String presetName)
         {
             if(presetName == AlphaModderConstants.DEFAULT_CONFIG_PRESET_NAME)
             {
-                return DataUtils.getDefaultPresetJsonStr();
+                return getDefaultPresetJsonStr();
             }
             if (!checkPresetExists(presetName))
             {
@@ -126,7 +141,13 @@ namespace AlphaModder.Utils
             return File.ReadAllText(getPresetAbsolutePath(presetName));
         }
 
-        public static List<string> getPresetsList()
+        // todo - improve this code
+        public static String getFileAsString(String absolutePath)
+        {
+            return File.ReadAllText(absolutePath);
+        }
+
+        public static List<String> getPresetsList()
         {
             String presetsFolder = getPresetsDirectoryStr();
             Directory.CreateDirectory(presetsFolder);
@@ -138,11 +159,71 @@ namespace AlphaModder.Utils
             foreach(FileInfo file in presetFiles)
             {
                 String fileName = file.Name;
-                String presetName = fileName.Substring(0, fileName.Length - 5);
+                String presetName = fileName.Substring(0, fileName.Length - 5); // -5 for ".json"
                 presetsList.Add(presetName);
             }
             presetsList.Sort();
             return presetsList;
+        }
+
+        public static List<String> getAlphaFilesList()
+        {
+            String alphaFilesFolder = getAlphaFilesDirectoryStr();
+            Directory.CreateDirectory(alphaFilesFolder);
+
+            DirectoryInfo directoryInfo = new DirectoryInfo(alphaFilesFolder);
+            FileInfo[] alphaFiles = directoryInfo.GetFiles("*.txt");
+
+            List<String> alphaFilesList = new List<String>();
+            foreach(FileInfo file in alphaFiles)
+            {
+                String fileName = file.Name;
+                String alphaFileName = fileName.Substring(0, fileName.Length - 4); // -4 for ".txt"
+                alphaFilesList.Add(alphaFileName);
+            }
+            alphaFilesList.Sort();
+            return alphaFilesList;
+        }
+
+        public static String getCurrentAlphaFileStr()
+        {
+            return getFileAsString(getAlphaFileAbsolutePathStr());
+        }
+
+        public static String getJsonFromAlphaFile(bool isAlphaX)
+        {
+            String alphaFileString = getCurrentAlphaFileStr();
+            StringBuilder json = new StringBuilder("");
+
+            String fileToRead = "";
+            if (isAlphaX)
+                fileToRead = getAlphaXFileAbsolutePathStr();
+            else
+                fileToRead = getAlphaFileAbsolutePathStr();
+
+            List<String> alphaFileStringList = new List<String>(File.ReadAllLines(fileToRead));
+
+            bool foundJson = false;
+
+            foreach(String line in alphaFileStringList)
+            {
+                if (foundJson) json.Append(line);
+                if (line.Contains("{"))
+                {
+                    json.Append(line);
+                    foundJson = true;
+                }
+                if (line.Contains("}"))
+                {
+                    break; // finished finding and retrieving the lines containing the json data. stop checking more lines
+                }
+            }
+            json.Replace(";", "");
+            String jsonStr = json.ToString();
+
+            jsonStr.Trim();
+
+            return jsonStr;
         }
 
         private static string getDefaultPresetJsonStr()

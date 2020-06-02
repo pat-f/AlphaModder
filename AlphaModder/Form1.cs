@@ -949,10 +949,16 @@ namespace AlphaModder
             return "";
         }
 
-        private void loadPresetToControls(String presetName)
+        // takes preset name or raw json
+        private void loadPresetToControls(String preset)
         {
-            String jsonString = DataUtils.getPresetAsJsonString(presetName);
-            JObject jsonObject = JObject.Parse(jsonString);
+            String jsonString = "";
+            JObject jsonObject;
+            Console.WriteLine(preset);
+            if (preset.StartsWith("{"))
+                jsonObject = JObject.Parse(preset);
+            else
+                jsonObject = JObject.Parse(DataUtils.getPresetAsJsonString(preset));
 
             // iterate thru each tab and it's controls
             foreach(TabPage tabPage in this.tabControl.Controls)
@@ -1011,10 +1017,26 @@ namespace AlphaModder
             }
         }
 
+        private void refreshAlphaFilesDropdown()
+        {
+            comboBoxAlphaFiles.Items.Clear();
+            List<String> alphaFilesList = DataUtils.getAlphaFilesList();
+            foreach (String alphaFileName in alphaFilesList)
+            {
+                comboBoxPresets.Items.Add(alphaFileName);
+            }
+        }
+
         private void ButtonRestoreDefaults_Click(object sender, EventArgs e)
         {
             loadPresetToControls(AlphaModderConstants.DEFAULT_CONFIG_PRESET_NAME);
             refreshPresetsDropdown();
+        }
+
+        private void ButtonLoadFromAlphaFile_Click(object sender, EventArgs e)
+        {
+            String alphaFilePresetJson = DataUtils.getJsonFromAlphaFile(false); // false - not alphax
+            loadPresetToControls(alphaFilePresetJson);
         }
     }
 }

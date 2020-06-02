@@ -286,6 +286,8 @@
             this.label75 = new System.Windows.Forms.Label();
             this.comboBoxAlphaFiles = new System.Windows.Forms.ComboBox();
             this.textBoxDescription = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.buttonLoadFromAlphaFile = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarTerraformingRate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarDroneRiots)).BeginInit();
@@ -2970,7 +2972,7 @@
             this.comboBoxPresets.FormattingEnabled = true;
             this.comboBoxPresets.Location = new System.Drawing.Point(884, 77);
             this.comboBoxPresets.Name = "comboBoxPresets";
-            this.comboBoxPresets.Size = new System.Drawing.Size(338, 21);
+            this.comboBoxPresets.Size = new System.Drawing.Size(218, 21);
             this.comboBoxPresets.TabIndex = 226;
             // 
             // buttonRestoreDefaults
@@ -3008,7 +3010,7 @@
             // 
             this.label75.AutoSize = true;
             this.label75.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label75.Location = new System.Drawing.Point(431, 31);
+            this.label75.Location = new System.Drawing.Point(531, 25);
             this.label75.Name = "label75";
             this.label75.Size = new System.Drawing.Size(88, 20);
             this.label75.TabIndex = 229;
@@ -3024,18 +3026,41 @@
             // 
             // textBoxDescription
             // 
-            this.textBoxDescription.Location = new System.Drawing.Point(525, 33);
+            this.textBoxDescription.Location = new System.Drawing.Point(625, 27);
             this.textBoxDescription.Multiline = true;
             this.textBoxDescription.Name = "textBoxDescription";
             this.textBoxDescription.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBoxDescription.Size = new System.Drawing.Size(353, 65);
+            this.textBoxDescription.Size = new System.Drawing.Size(253, 101);
             this.textBoxDescription.TabIndex = 231;
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(321, 65);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(80, 44);
+            this.button1.TabIndex = 232;
+            this.button1.Text = "Save Preset";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // buttonLoadFromAlphaFile
+            // 
+            this.buttonLoadFromAlphaFile.Font = new System.Drawing.Font("Consolas", 9.75F);
+            this.buttonLoadFromAlphaFile.Location = new System.Drawing.Point(1108, 77);
+            this.buttonLoadFromAlphaFile.Name = "buttonLoadFromAlphaFile";
+            this.buttonLoadFromAlphaFile.Size = new System.Drawing.Size(114, 44);
+            this.buttonLoadFromAlphaFile.TabIndex = 233;
+            this.buttonLoadFromAlphaFile.Text = "Load Current Game Settings";
+            this.buttonLoadFromAlphaFile.UseVisualStyleBackColor = true;
+            this.buttonLoadFromAlphaFile.Click += new System.EventHandler(this.ButtonLoadFromAlphaFile_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1234, 758);
+            this.Controls.Add(this.buttonLoadFromAlphaFile);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.textBoxDescription);
             this.Controls.Add(this.comboBoxAlphaFiles);
             this.Controls.Add(this.label75);
@@ -3345,6 +3370,8 @@
         private System.Windows.Forms.Label label75;
         private System.Windows.Forms.ComboBox comboBoxAlphaFiles;
         private System.Windows.Forms.TextBox textBoxDescription;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonLoadFromAlphaFile;
     }
 }
 
