@@ -2947,7 +2947,7 @@
             // buttonSavePreset
             // 
             this.buttonSavePreset.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSavePreset.Location = new System.Drawing.Point(970, 27);
+            this.buttonSavePreset.Location = new System.Drawing.Point(850, 27);
             this.buttonSavePreset.Name = "buttonSavePreset";
             this.buttonSavePreset.Size = new System.Drawing.Size(80, 44);
             this.buttonSavePreset.TabIndex = 224;
@@ -2958,7 +2958,7 @@
             // buttonLoadPreset
             // 
             this.buttonLoadPreset.Font = new System.Drawing.Font("Consolas", 9.75F);
-            this.buttonLoadPreset.Location = new System.Drawing.Point(884, 27);
+            this.buttonLoadPreset.Location = new System.Drawing.Point(764, 27);
             this.buttonLoadPreset.Name = "buttonLoadPreset";
             this.buttonLoadPreset.Size = new System.Drawing.Size(80, 44);
             this.buttonLoadPreset.TabIndex = 225;
@@ -2968,16 +2968,17 @@
             // 
             // comboBoxPresets
             // 
+            this.comboBoxPresets.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxPresets.FormattingEnabled = true;
-            this.comboBoxPresets.Location = new System.Drawing.Point(884, 77);
+            this.comboBoxPresets.Location = new System.Drawing.Point(932, 78);
             this.comboBoxPresets.Name = "comboBoxPresets";
-            this.comboBoxPresets.Size = new System.Drawing.Size(218, 21);
+            this.comboBoxPresets.Size = new System.Drawing.Size(286, 26);
             this.comboBoxPresets.TabIndex = 226;
             // 
             // buttonRestoreDefaults
             // 
             this.buttonRestoreDefaults.Font = new System.Drawing.Font("Consolas", 9.75F);
-            this.buttonRestoreDefaults.Location = new System.Drawing.Point(1056, 27);
+            this.buttonRestoreDefaults.Location = new System.Drawing.Point(936, 27);
             this.buttonRestoreDefaults.Name = "buttonRestoreDefaults";
             this.buttonRestoreDefaults.Size = new System.Drawing.Size(80, 44);
             this.buttonRestoreDefaults.TabIndex = 227;
@@ -2988,7 +2989,7 @@
             // buttonDeletePreset
             // 
             this.buttonDeletePreset.Font = new System.Drawing.Font("Consolas", 9.75F);
-            this.buttonDeletePreset.Location = new System.Drawing.Point(1142, 27);
+            this.buttonDeletePreset.Location = new System.Drawing.Point(1022, 27);
             this.buttonDeletePreset.Name = "buttonDeletePreset";
             this.buttonDeletePreset.Size = new System.Drawing.Size(80, 44);
             this.buttonDeletePreset.TabIndex = 228;
@@ -2999,7 +3000,7 @@
             // 
             this.label74.AutoSize = true;
             this.label74.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label74.Location = new System.Drawing.Point(155, 31);
+            this.label74.Location = new System.Drawing.Point(376, 25);
             this.label74.Name = "label74";
             this.label74.Size = new System.Drawing.Size(59, 20);
             this.label74.TabIndex = 219;
@@ -3020,9 +3021,9 @@
             // comboBoxAlphaFiles
             // 
             this.comboBoxAlphaFiles.FormattingEnabled = true;
-            this.comboBoxAlphaFiles.Location = new System.Drawing.Point(220, 33);
+            this.comboBoxAlphaFiles.Location = new System.Drawing.Point(441, 27);
             this.comboBoxAlphaFiles.Name = "comboBoxAlphaFiles";
-            this.comboBoxAlphaFiles.Size = new System.Drawing.Size(205, 21);
+            this.comboBoxAlphaFiles.Size = new System.Drawing.Size(84, 21);
             this.comboBoxAlphaFiles.TabIndex = 230;
             this.comboBoxAlphaFiles.Visible = false;
             // 
@@ -3032,14 +3033,14 @@
             this.textBoxDescription.Multiline = true;
             this.textBoxDescription.Name = "textBoxDescription";
             this.textBoxDescription.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBoxDescription.Size = new System.Drawing.Size(253, 101);
+            this.textBoxDescription.Size = new System.Drawing.Size(93, 101);
             this.textBoxDescription.TabIndex = 231;
             this.textBoxDescription.Visible = false;
             // 
             // buttonLoadFromAlphaFile
             // 
             this.buttonLoadFromAlphaFile.Font = new System.Drawing.Font("Consolas", 9.75F);
-            this.buttonLoadFromAlphaFile.Location = new System.Drawing.Point(1108, 77);
+            this.buttonLoadFromAlphaFile.Location = new System.Drawing.Point(1108, 27);
             this.buttonLoadFromAlphaFile.Name = "buttonLoadFromAlphaFile";
             this.buttonLoadFromAlphaFile.Size = new System.Drawing.Size(114, 44);
             this.buttonLoadFromAlphaFile.TabIndex = 233;
