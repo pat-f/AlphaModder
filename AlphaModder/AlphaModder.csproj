@@ -65,6 +65,7 @@
       <DependentUpon>FormHurryCalculator.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\AlphaConfiguration.cs" />
+    <Compile Include="Model\MessageBoxType.cs" />
     <Compile Include="OptionsScreen.cs">
       <SubType>Form</SubType>
     </Compile>

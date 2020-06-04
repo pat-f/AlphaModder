@@ -80,13 +80,10 @@ namespace AlphaModder
 
         private void ButtonSave_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(textBoxDescription.Text);
+
             String applyMessage = "alpha.txt and alphax.txt will be overwritten with the selected settings.";
-            DialogResult dialogResult = MessageBox.Show(applyMessage, "Apply Modifications", MessageBoxButtons.OKCancel);
-            if (dialogResult == DialogResult.Cancel)
-            {
+            if (!DialogUtils.messageBoxOkCancel(applyMessage, MessageBoxType.QUESTION))
                 return;
-            }
 
             AlphaConfiguration alphaConfiguration = buildAlphaConfiguration();
 

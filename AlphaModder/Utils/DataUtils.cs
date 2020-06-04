@@ -114,7 +114,7 @@ namespace AlphaModder.Utils
             if (checkPresetExists(presetName))
             {
                 // if the user clicks Cancel or Close, do nothing.
-                if(!DialogUtils.messageBoxOkCancel("Preset \"" + presetName + "\" already exists. Overwrite?"))
+                if(!DialogUtils.messageBoxOkCancel("Preset \"" + presetName + "\" already exists. Overwrite?", MessageBoxType.INFO))
                 {
                     return false;
                 }
