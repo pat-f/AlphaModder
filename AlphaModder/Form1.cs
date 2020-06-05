@@ -29,7 +29,7 @@ namespace AlphaModder
                 String.Equals(Properties.Settings.Default.GameFolder, "Not found")
                 || !SystemUtils.verifyGameFolder(Properties.Settings.Default.GameFolder)
                 )
-                if(!SystemUtils.findGameFolder())
+                if(!SystemUtils.findGameFolder()) // todo dialogutils
                     MessageBox.Show("No game installation folder was found. Please configure it in the Tools menu or put the Alpha Modder executable in the game installation folder.");
             
             labelGameFolder.Text = Properties.Settings.Default.GameFolder;
@@ -37,7 +37,14 @@ namespace AlphaModder
                 labelGameFolder.ForeColor = Color.Red;
 
             // set the huge planet size slider text
-            labelHugePlanetSize.Text = "Default \n(128 x 64)";
+            labelHugePlanetSize.Text = "(128 x 64)";
+
+            // set the other labels to blank
+            labelTerraformingSpeed.Text =
+                labelDroneRiots.Text =
+                labelNativeLife.Text =
+                labelFungus.Text =
+                labelPopulationLimits.Text = "";
 
             setMousewheelHandlersDisable();
             refreshPresetsDropdown();
@@ -736,7 +743,7 @@ namespace AlphaModder
             else
                 setResMessage = "This will set DirectDraw=1 in 'Alpha Centauri.ini', causing the game to run in default resolution (640 x 480).";
             
-
+            // todo dialogutils
             DialogResult dialogResult = MessageBox.Show(setResMessage, "Set Game Resolution", MessageBoxButtons.OKCancel);
             if (dialogResult == DialogResult.OK)
             {
@@ -747,67 +754,67 @@ namespace AlphaModder
         private void TrackBarTerraformingRate_Scroll(object sender, EventArgs e)
         {
             if(trackBarTerraformingRate.Value == 0)
-                labelTerraformingSpeed.Text = "Standard";
+                labelTerraformingSpeed.Text = "";
             else if(trackBarTerraformingRate.Value == 1)
-                labelTerraformingSpeed.Text = "x2";
+                labelTerraformingSpeed.Text = "";
             else if (trackBarTerraformingRate.Value == 2)
-                labelTerraformingSpeed.Text = "x4";
+                labelTerraformingSpeed.Text = "";
             else if(trackBarTerraformingRate.Value == 3)
-                labelTerraformingSpeed.Text = "Instant - all terraforming takes 1 turn";
+                labelTerraformingSpeed.Text = "All terraforming takes 1 turn";
         }
 
         private void TrackBarDroneRiots_Scroll(object sender, EventArgs e)
         {
             if (trackBarDroneRiots.Value == 0)
-                labelDroneRiots.Text = "Standard";
+                labelDroneRiots.Text = "";
             else if (trackBarDroneRiots.Value == 1)
-                labelDroneRiots.Text = "Easy - Half cost and maintenance for Rec Commons, Hologram Theatre, Paradise Gardens, and Punishment Sphere. Police ability unlocked.";
+                labelDroneRiots.Text = "Half cost and maintenance for Rec Commons, Hologram Theatre, Paradise Gardens, and Punishment Sphere. Police ability unlocked.";
             else if (trackBarDroneRiots.Value == 2)
-                labelDroneRiots.Text = "Very Easy - Rec Commons, Hologram Theatre, Paradise Gardens, Punishment Sphere, and Police ability unlocked and no cost.";
+                labelDroneRiots.Text = "Rec Commons, Hologram Theatre, Paradise Gardens, Punishment Sphere, and Police ability unlocked and no cost.";
         }
         
         private void TrackBarNativeLife_Scroll(object sender, EventArgs e)
         {
             if (trackBarNativeLife.Value == 0)
-                labelNativeLife.Text = "Standard";
+                labelNativeLife.Text = "";
             else if (trackBarNativeLife.Value == 1)
-                labelNativeLife.Text = "Easy - Empath Song and Hypnotic Trance abilities unlocked, cost 1, and double attack/defense bonus. Native life units and psi attack/defense disabled..";
+                labelNativeLife.Text = "Empath Song and Hypnotic Trance abilities unlocked, cost 1, and double attack/defense bonus. Native life units and psi attack/defense disabled..";
             else if (trackBarNativeLife.Value == 2)
-                labelNativeLife.Text = "Very Easy - Empath Song and Hypnotic Trance abilities unlocked, free, and x10 attack/defense bonus. Native life units and psi attack/defense disabled.";
+                labelNativeLife.Text = "Empath Song and Hypnotic Trance abilities unlocked, free, and x10 attack/defense bonus. Native life units and psi attack/defense disabled.";
         }
 
         private void TrackBarFungus_Scroll(object sender, EventArgs e)
         {
             if (trackBarFungus.Value == 0)
-                labelFungus.Text = "Standard";
+                labelFungus.Text = "";
             else if (trackBarFungus.Value == 1)
-                labelFungus.Text = "Easy - Double fungus removal speed, Fungicide Tanks ability unlocked, unlock build roads on fungus and ease fungus movement.";
+                labelFungus.Text = "Double fungus removal speed, Fungicide Tanks ability unlocked, unlock build roads on fungus and ease fungus movement.";
             else if (trackBarFungus.Value == 2)
-                labelFungus.Text = "Very Easy = Remove fungus 1 turn, disable fungicide tanks, unlock build roads on fungus and ease fungus movement.";
+                labelFungus.Text = "Remove fungus 1 turn, disable fungicide tanks, unlock build roads on fungus and ease fungus movement.";
         }
 
         private void TrackBarPopulationLimits_Scroll(object sender, EventArgs e)
         {
             if (trackBarPopulationLimits.Value == 0)
-                labelPopulationLimits.Text = "Standard";
+                labelPopulationLimits.Text = "";
             else if (trackBarPopulationLimits.Value == 1)
-                labelPopulationLimits.Text = "Relaxed - Population limit without Hab Complex: 11, without Habitation Dome: 18.  Both are half cost.  Hab Complex unlocked, Habitation Dome prerequisite: Industrial Automation.";
+                labelPopulationLimits.Text = "Population limit without Hab Complex: 11, without Habitation Dome: 18.  Both are half cost.  Hab Complex unlocked, Habitation Dome prerequisite: Industrial Automation.";
             else if (trackBarPopulationLimits.Value == 2)
-                labelPopulationLimits.Text = "Unlimited - Hab Complex and Habitation Dome disabled.";
+                labelPopulationLimits.Text = "Hab Complex and Habitation Dome disabled.";
         }
 
         private void TrackBarHugePlanetSize_Scroll(object sender, EventArgs e)
         {
             if(trackBarHugePlanetSize.Value == 0)
-                labelHugePlanetSize.Text = "Default \n(128 x 64)"; // 8,192
+                labelHugePlanetSize.Text = "(128 x 64)"; // 8,192
             else if(trackBarHugePlanetSize.Value == 1)
-                labelHugePlanetSize.Text = "x1.5 \n(128 x 96)"; // 12,288
+                labelHugePlanetSize.Text = "(128 x 96)"; // 12,288
             else if (trackBarHugePlanetSize.Value == 2)
-                labelHugePlanetSize.Text = "x2 \n(128 x 128)"; // 16,384
+                labelHugePlanetSize.Text = "(128 x 128)"; // 16,384
             else if (trackBarHugePlanetSize.Value == 3)
-                labelHugePlanetSize.Text = "x4 \n(256 x 128)"; // 32,768
+                labelHugePlanetSize.Text = "(256 x 128)"; // 32,768
             else if (trackBarHugePlanetSize.Value == 4)
-                labelHugePlanetSize.Text = "x8 \n(256 x 256)"; // 65,536
+                labelHugePlanetSize.Text = "(256 x 256)"; // 65,536
         }
 
         private void OpenGameFolderToolStripMenuItem_Click(object sender, EventArgs e)

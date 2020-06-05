@@ -188,6 +188,27 @@
             this.checkBoxDisableRaiseLowerTerrain = new System.Windows.Forms.CheckBox();
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabPageGeneral = new System.Windows.Forms.TabPage();
+            this.label92 = new System.Windows.Forms.Label();
+            this.label96 = new System.Windows.Forms.Label();
+            this.label95 = new System.Windows.Forms.Label();
+            this.label94 = new System.Windows.Forms.Label();
+            this.label93 = new System.Windows.Forms.Label();
+            this.label89 = new System.Windows.Forms.Label();
+            this.label90 = new System.Windows.Forms.Label();
+            this.label91 = new System.Windows.Forms.Label();
+            this.label86 = new System.Windows.Forms.Label();
+            this.label87 = new System.Windows.Forms.Label();
+            this.label88 = new System.Windows.Forms.Label();
+            this.label83 = new System.Windows.Forms.Label();
+            this.label84 = new System.Windows.Forms.Label();
+            this.label85 = new System.Windows.Forms.Label();
+            this.label82 = new System.Windows.Forms.Label();
+            this.label81 = new System.Windows.Forms.Label();
+            this.label80 = new System.Windows.Forms.Label();
+            this.label79 = new System.Windows.Forms.Label();
+            this.label78 = new System.Windows.Forms.Label();
+            this.label77 = new System.Windows.Forms.Label();
+            this.label76 = new System.Windows.Forms.Label();
             this.tabPageOther = new System.Windows.Forms.TabPage();
             this.label73 = new System.Windows.Forms.Label();
             this.label55 = new System.Windows.Forms.Label();
@@ -478,6 +499,7 @@
             // 
             // trackBarTerraformingRate
             // 
+            this.trackBarTerraformingRate.BackColor = System.Drawing.SystemColors.Window;
             this.trackBarTerraformingRate.Location = new System.Drawing.Point(22, 41);
             this.trackBarTerraformingRate.Maximum = 3;
             this.trackBarTerraformingRate.Name = "trackBarTerraformingRate";
@@ -490,7 +512,7 @@
             // 
             this.labelTerraformingSpeed.AutoSize = true;
             this.labelTerraformingSpeed.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTerraformingSpeed.Location = new System.Drawing.Point(328, 41);
+            this.labelTerraformingSpeed.Location = new System.Drawing.Point(375, 18);
             this.labelTerraformingSpeed.MaximumSize = new System.Drawing.Size(600, 0);
             this.labelTerraformingSpeed.Name = "labelTerraformingSpeed";
             this.labelTerraformingSpeed.Size = new System.Drawing.Size(69, 20);
@@ -519,10 +541,11 @@
             // 
             // trackBarDroneRiots
             // 
+            this.trackBarDroneRiots.BackColor = System.Drawing.SystemColors.Window;
             this.trackBarDroneRiots.Location = new System.Drawing.Point(22, 120);
             this.trackBarDroneRiots.Maximum = 2;
             this.trackBarDroneRiots.Name = "trackBarDroneRiots";
-            this.trackBarDroneRiots.Size = new System.Drawing.Size(196, 45);
+            this.trackBarDroneRiots.Size = new System.Drawing.Size(300, 45);
             this.trackBarDroneRiots.TabIndex = 27;
             this.trackBarDroneRiots.Tag = "";
             this.trackBarDroneRiots.Scroll += new System.EventHandler(this.TrackBarDroneRiots_Scroll);
@@ -531,7 +554,7 @@
             // 
             this.labelDroneRiots.AutoSize = true;
             this.labelDroneRiots.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDroneRiots.Location = new System.Drawing.Point(224, 120);
+            this.labelDroneRiots.Location = new System.Drawing.Point(375, 97);
             this.labelDroneRiots.MaximumSize = new System.Drawing.Size(600, 0);
             this.labelDroneRiots.Name = "labelDroneRiots";
             this.labelDroneRiots.Size = new System.Drawing.Size(69, 20);
@@ -542,7 +565,7 @@
             // 
             this.labelNativeLife.AutoSize = true;
             this.labelNativeLife.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNativeLife.Location = new System.Drawing.Point(224, 204);
+            this.labelNativeLife.Location = new System.Drawing.Point(375, 181);
             this.labelNativeLife.MaximumSize = new System.Drawing.Size(600, 0);
             this.labelNativeLife.Name = "labelNativeLife";
             this.labelNativeLife.Size = new System.Drawing.Size(69, 20);
@@ -551,10 +574,11 @@
             // 
             // trackBarNativeLife
             // 
+            this.trackBarNativeLife.BackColor = System.Drawing.SystemColors.Window;
             this.trackBarNativeLife.Location = new System.Drawing.Point(22, 204);
             this.trackBarNativeLife.Maximum = 2;
             this.trackBarNativeLife.Name = "trackBarNativeLife";
-            this.trackBarNativeLife.Size = new System.Drawing.Size(196, 45);
+            this.trackBarNativeLife.Size = new System.Drawing.Size(300, 45);
             this.trackBarNativeLife.TabIndex = 30;
             this.trackBarNativeLife.Tag = "";
             this.trackBarNativeLife.Scroll += new System.EventHandler(this.TrackBarNativeLife_Scroll);
@@ -565,15 +589,15 @@
             this.label5.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.label5.Location = new System.Drawing.Point(18, 181);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(85, 20);
+            this.label5.Size = new System.Drawing.Size(100, 20);
             this.label5.TabIndex = 29;
-            this.label5.Text = "Native Life";
+            this.label5.Text = "Mind Worms";
             // 
             // labelFungus
             // 
             this.labelFungus.AutoSize = true;
             this.labelFungus.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelFungus.Location = new System.Drawing.Point(224, 284);
+            this.labelFungus.Location = new System.Drawing.Point(375, 261);
             this.labelFungus.MaximumSize = new System.Drawing.Size(600, 0);
             this.labelFungus.Name = "labelFungus";
             this.labelFungus.Size = new System.Drawing.Size(69, 20);
@@ -582,10 +606,11 @@
             // 
             // trackBarFungus
             // 
+            this.trackBarFungus.BackColor = System.Drawing.SystemColors.Window;
             this.trackBarFungus.Location = new System.Drawing.Point(22, 284);
             this.trackBarFungus.Maximum = 2;
             this.trackBarFungus.Name = "trackBarFungus";
-            this.trackBarFungus.Size = new System.Drawing.Size(196, 45);
+            this.trackBarFungus.Size = new System.Drawing.Size(300, 45);
             this.trackBarFungus.TabIndex = 36;
             this.trackBarFungus.Tag = "";
             this.trackBarFungus.Scroll += new System.EventHandler(this.TrackBarFungus_Scroll);
@@ -596,15 +621,15 @@
             this.label9.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.label9.Location = new System.Drawing.Point(18, 261);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(60, 20);
+            this.label9.Size = new System.Drawing.Size(94, 20);
             this.label9.TabIndex = 35;
-            this.label9.Text = "Fungus";
+            this.label9.Text = "Xenofungus";
             // 
             // labelPopulationLimits
             // 
             this.labelPopulationLimits.AutoSize = true;
             this.labelPopulationLimits.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPopulationLimits.Location = new System.Drawing.Point(224, 371);
+            this.labelPopulationLimits.Location = new System.Drawing.Point(375, 348);
             this.labelPopulationLimits.MaximumSize = new System.Drawing.Size(600, 0);
             this.labelPopulationLimits.Name = "labelPopulationLimits";
             this.labelPopulationLimits.Size = new System.Drawing.Size(69, 20);
@@ -613,10 +638,11 @@
             // 
             // trackBarPopulationLimits
             // 
+            this.trackBarPopulationLimits.BackColor = System.Drawing.SystemColors.Window;
             this.trackBarPopulationLimits.Location = new System.Drawing.Point(22, 371);
             this.trackBarPopulationLimits.Maximum = 2;
             this.trackBarPopulationLimits.Name = "trackBarPopulationLimits";
-            this.trackBarPopulationLimits.Size = new System.Drawing.Size(196, 45);
+            this.trackBarPopulationLimits.Size = new System.Drawing.Size(300, 45);
             this.trackBarPopulationLimits.TabIndex = 39;
             this.trackBarPopulationLimits.Tag = "";
             this.trackBarPopulationLimits.Scroll += new System.EventHandler(this.TrackBarPopulationLimits_Scroll);
@@ -635,7 +661,7 @@
             // 
             this.labelHugePlanetSize.AutoSize = true;
             this.labelHugePlanetSize.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelHugePlanetSize.Location = new System.Drawing.Point(328, 458);
+            this.labelHugePlanetSize.Location = new System.Drawing.Point(375, 435);
             this.labelHugePlanetSize.MaximumSize = new System.Drawing.Size(600, 0);
             this.labelHugePlanetSize.Name = "labelHugePlanetSize";
             this.labelHugePlanetSize.Size = new System.Drawing.Size(69, 20);
@@ -644,6 +670,7 @@
             // 
             // trackBarHugePlanetSize
             // 
+            this.trackBarHugePlanetSize.BackColor = System.Drawing.SystemColors.Window;
             this.trackBarHugePlanetSize.Location = new System.Drawing.Point(22, 458);
             this.trackBarHugePlanetSize.Maximum = 4;
             this.trackBarHugePlanetSize.Name = "trackBarHugePlanetSize";
@@ -1729,7 +1756,7 @@
             // 
             this.labelTechDiscoveryRate.AutoSize = true;
             this.labelTechDiscoveryRate.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTechDiscoveryRate.Location = new System.Drawing.Point(328, 549);
+            this.labelTechDiscoveryRate.Location = new System.Drawing.Point(375, 526);
             this.labelTechDiscoveryRate.MaximumSize = new System.Drawing.Size(600, 0);
             this.labelTechDiscoveryRate.Name = "labelTechDiscoveryRate";
             this.labelTechDiscoveryRate.Size = new System.Drawing.Size(69, 20);
@@ -1738,6 +1765,7 @@
             // 
             // trackBarTechDiscoveryRate
             // 
+            this.trackBarTechDiscoveryRate.BackColor = System.Drawing.SystemColors.Window;
             this.trackBarTechDiscoveryRate.Location = new System.Drawing.Point(22, 549);
             this.trackBarTechDiscoveryRate.Maximum = 9;
             this.trackBarTechDiscoveryRate.Name = "trackBarTechDiscoveryRate";
@@ -1815,6 +1843,27 @@
             // tabPageGeneral
             // 
             this.tabPageGeneral.AutoScroll = true;
+            this.tabPageGeneral.Controls.Add(this.label92);
+            this.tabPageGeneral.Controls.Add(this.label96);
+            this.tabPageGeneral.Controls.Add(this.label95);
+            this.tabPageGeneral.Controls.Add(this.label94);
+            this.tabPageGeneral.Controls.Add(this.label93);
+            this.tabPageGeneral.Controls.Add(this.label89);
+            this.tabPageGeneral.Controls.Add(this.label90);
+            this.tabPageGeneral.Controls.Add(this.label91);
+            this.tabPageGeneral.Controls.Add(this.label86);
+            this.tabPageGeneral.Controls.Add(this.label87);
+            this.tabPageGeneral.Controls.Add(this.label88);
+            this.tabPageGeneral.Controls.Add(this.label83);
+            this.tabPageGeneral.Controls.Add(this.label84);
+            this.tabPageGeneral.Controls.Add(this.label85);
+            this.tabPageGeneral.Controls.Add(this.label82);
+            this.tabPageGeneral.Controls.Add(this.label81);
+            this.tabPageGeneral.Controls.Add(this.label80);
+            this.tabPageGeneral.Controls.Add(this.label79);
+            this.tabPageGeneral.Controls.Add(this.label78);
+            this.tabPageGeneral.Controls.Add(this.label77);
+            this.tabPageGeneral.Controls.Add(this.label76);
             this.tabPageGeneral.Controls.Add(this.label3);
             this.tabPageGeneral.Controls.Add(this.trackBarTerraformingRate);
             this.tabPageGeneral.Controls.Add(this.labelTechDiscoveryRate);
@@ -1843,6 +1892,237 @@
             this.tabPageGeneral.TabIndex = 0;
             this.tabPageGeneral.Text = "General";
             this.tabPageGeneral.UseVisualStyleBackColor = true;
+            // 
+            // label92
+            // 
+            this.label92.AutoSize = true;
+            this.label92.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label92.Location = new System.Drawing.Point(19, 486);
+            this.label92.MaximumSize = new System.Drawing.Size(600, 0);
+            this.label92.Name = "label92";
+            this.label92.Size = new System.Drawing.Size(63, 17);
+            this.label92.TabIndex = 240;
+            this.label92.Text = "Standard";
+            // 
+            // label96
+            // 
+            this.label96.AutoSize = true;
+            this.label96.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label96.Location = new System.Drawing.Point(299, 486);
+            this.label96.MaximumSize = new System.Drawing.Size(600, 0);
+            this.label96.Name = "label96";
+            this.label96.Size = new System.Drawing.Size(22, 17);
+            this.label96.TabIndex = 239;
+            this.label96.Text = "8x";
+            // 
+            // label95
+            // 
+            this.label95.AutoSize = true;
+            this.label95.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label95.Location = new System.Drawing.Point(231, 486);
+            this.label95.MaximumSize = new System.Drawing.Size(600, 0);
+            this.label95.Name = "label95";
+            this.label95.Size = new System.Drawing.Size(22, 17);
+            this.label95.TabIndex = 238;
+            this.label95.Text = "4x";
+            // 
+            // label94
+            // 
+            this.label94.AutoSize = true;
+            this.label94.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label94.Location = new System.Drawing.Point(162, 486);
+            this.label94.MaximumSize = new System.Drawing.Size(600, 0);
+            this.label94.Name = "label94";
+            this.label94.Size = new System.Drawing.Size(22, 17);
+            this.label94.TabIndex = 237;
+            this.label94.Text = "2x";
+            // 
+            // label93
+            // 
+            this.label93.AutoSize = true;
+            this.label93.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label93.Location = new System.Drawing.Point(93, 486);
+            this.label93.MaximumSize = new System.Drawing.Size(600, 0);
+            this.label93.Name = "label93";
+            this.label93.Size = new System.Drawing.Size(30, 17);
+            this.label93.TabIndex = 236;
+            this.label93.Text = "1.5x";
+            // 
+            // label89
+            // 
+            this.label89.AutoSize = true;
+            this.label89.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label89.Location = new System.Drawing.Point(272, 399);
+            this.label89.MaximumSize = new System.Drawing.Size(600, 0);
+            this.label89.Name = "label89";
+            this.label89.Size = new System.Drawing.Size(66, 17);
+            this.label89.TabIndex = 234;
+            this.label89.Text = "Unlimited";
+            // 
+            // label90
+            // 
+            this.label90.AutoSize = true;
+            this.label90.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label90.Location = new System.Drawing.Point(147, 399);
+            this.label90.MaximumSize = new System.Drawing.Size(600, 0);
+            this.label90.Name = "label90";
+            this.label90.Size = new System.Drawing.Size(55, 17);
+            this.label90.TabIndex = 233;
+            this.label90.Text = "Relaxed";
+            // 
+            // label91
+            // 
+            this.label91.AutoSize = true;
+            this.label91.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label91.Location = new System.Drawing.Point(19, 399);
+            this.label91.MaximumSize = new System.Drawing.Size(600, 0);
+            this.label91.Name = "label91";
+            this.label91.Size = new System.Drawing.Size(63, 17);
+            this.label91.TabIndex = 232;
+            this.label91.Text = "Standard";
+            // 
+            // label86
+            // 
+            this.label86.AutoSize = true;
+            this.label86.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label86.Location = new System.Drawing.Point(272, 312);
+            this.label86.MaximumSize = new System.Drawing.Size(600, 0);
+            this.label86.Name = "label86";
+            this.label86.Size = new System.Drawing.Size(66, 17);
+            this.label86.TabIndex = 231;
+            this.label86.Text = "Very Easy";
+            // 
+            // label87
+            // 
+            this.label87.AutoSize = true;
+            this.label87.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label87.Location = new System.Drawing.Point(155, 312);
+            this.label87.MaximumSize = new System.Drawing.Size(600, 0);
+            this.label87.Name = "label87";
+            this.label87.Size = new System.Drawing.Size(35, 17);
+            this.label87.TabIndex = 230;
+            this.label87.Text = "Easy";
+            // 
+            // label88
+            // 
+            this.label88.AutoSize = true;
+            this.label88.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label88.Location = new System.Drawing.Point(19, 312);
+            this.label88.MaximumSize = new System.Drawing.Size(600, 0);
+            this.label88.Name = "label88";
+            this.label88.Size = new System.Drawing.Size(63, 17);
+            this.label88.TabIndex = 229;
+            this.label88.Text = "Standard";
+            // 
+            // label83
+            // 
+            this.label83.AutoSize = true;
+            this.label83.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label83.Location = new System.Drawing.Point(272, 232);
+            this.label83.MaximumSize = new System.Drawing.Size(600, 0);
+            this.label83.Name = "label83";
+            this.label83.Size = new System.Drawing.Size(66, 17);
+            this.label83.TabIndex = 228;
+            this.label83.Text = "Very Easy";
+            // 
+            // label84
+            // 
+            this.label84.AutoSize = true;
+            this.label84.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label84.Location = new System.Drawing.Point(155, 232);
+            this.label84.MaximumSize = new System.Drawing.Size(600, 0);
+            this.label84.Name = "label84";
+            this.label84.Size = new System.Drawing.Size(35, 17);
+            this.label84.TabIndex = 227;
+            this.label84.Text = "Easy";
+            // 
+            // label85
+            // 
+            this.label85.AutoSize = true;
+            this.label85.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label85.Location = new System.Drawing.Point(19, 232);
+            this.label85.MaximumSize = new System.Drawing.Size(600, 0);
+            this.label85.Name = "label85";
+            this.label85.Size = new System.Drawing.Size(63, 17);
+            this.label85.TabIndex = 226;
+            this.label85.Text = "Standard";
+            // 
+            // label82
+            // 
+            this.label82.AutoSize = true;
+            this.label82.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label82.Location = new System.Drawing.Point(272, 148);
+            this.label82.MaximumSize = new System.Drawing.Size(600, 0);
+            this.label82.Name = "label82";
+            this.label82.Size = new System.Drawing.Size(66, 17);
+            this.label82.TabIndex = 225;
+            this.label82.Text = "Very Easy";
+            // 
+            // label81
+            // 
+            this.label81.AutoSize = true;
+            this.label81.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label81.Location = new System.Drawing.Point(155, 148);
+            this.label81.MaximumSize = new System.Drawing.Size(600, 0);
+            this.label81.Name = "label81";
+            this.label81.Size = new System.Drawing.Size(35, 17);
+            this.label81.TabIndex = 224;
+            this.label81.Text = "Easy";
+            // 
+            // label80
+            // 
+            this.label80.AutoSize = true;
+            this.label80.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label80.Location = new System.Drawing.Point(19, 148);
+            this.label80.MaximumSize = new System.Drawing.Size(600, 0);
+            this.label80.Name = "label80";
+            this.label80.Size = new System.Drawing.Size(63, 17);
+            this.label80.TabIndex = 223;
+            this.label80.Text = "Standard";
+            // 
+            // label79
+            // 
+            this.label79.AutoSize = true;
+            this.label79.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label79.Location = new System.Drawing.Point(278, 69);
+            this.label79.MaximumSize = new System.Drawing.Size(600, 0);
+            this.label79.Name = "label79";
+            this.label79.Size = new System.Drawing.Size(51, 17);
+            this.label79.TabIndex = 222;
+            this.label79.Text = "Instant";
+            // 
+            // label78
+            // 
+            this.label78.AutoSize = true;
+            this.label78.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label78.Location = new System.Drawing.Point(207, 69);
+            this.label78.MaximumSize = new System.Drawing.Size(600, 0);
+            this.label78.Name = "label78";
+            this.label78.Size = new System.Drawing.Size(22, 17);
+            this.label78.TabIndex = 221;
+            this.label78.Text = "4x";
+            // 
+            // label77
+            // 
+            this.label77.AutoSize = true;
+            this.label77.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label77.Location = new System.Drawing.Point(116, 69);
+            this.label77.MaximumSize = new System.Drawing.Size(600, 0);
+            this.label77.Name = "label77";
+            this.label77.Size = new System.Drawing.Size(22, 17);
+            this.label77.TabIndex = 220;
+            this.label77.Text = "2x";
+            // 
+            // label76
+            // 
+            this.label76.AutoSize = true;
+            this.label76.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label76.Location = new System.Drawing.Point(19, 69);
+            this.label76.MaximumSize = new System.Drawing.Size(600, 0);
+            this.label76.Name = "label76";
+            this.label76.Size = new System.Drawing.Size(63, 17);
+            this.label76.TabIndex = 219;
+            this.label76.Text = "Standard";
             // 
             // tabPageOther
             // 
@@ -2114,7 +2394,7 @@
             // 
             this.label69.AutoSize = true;
             this.label69.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label69.Location = new System.Drawing.Point(812, 81);
+            this.label69.Location = new System.Drawing.Point(809, 81);
             this.label69.Name = "label69";
             this.label69.Size = new System.Drawing.Size(70, 20);
             this.label69.TabIndex = 299;
@@ -2123,7 +2403,7 @@
             // numericFusionReactorPower
             // 
             this.numericFusionReactorPower.Font = new System.Drawing.Font("Consolas", 12F);
-            this.numericFusionReactorPower.Location = new System.Drawing.Point(952, 169);
+            this.numericFusionReactorPower.Location = new System.Drawing.Point(916, 336);
             this.numericFusionReactorPower.Maximum = new decimal(new int[] {
             999,
             0,
@@ -2138,11 +2418,12 @@
             0,
             0,
             0});
+            this.numericFusionReactorPower.Visible = false;
             // 
             // numericQuantumChamberPower
             // 
             this.numericQuantumChamberPower.Font = new System.Drawing.Font("Consolas", 12F);
-            this.numericQuantumChamberPower.Location = new System.Drawing.Point(952, 201);
+            this.numericQuantumChamberPower.Location = new System.Drawing.Point(916, 368);
             this.numericQuantumChamberPower.Maximum = new decimal(new int[] {
             999,
             0,
@@ -2157,11 +2438,12 @@
             0,
             0,
             0});
+            this.numericQuantumChamberPower.Visible = false;
             // 
             // numericSingularityEnginePower
             // 
             this.numericSingularityEnginePower.Font = new System.Drawing.Font("Consolas", 12F);
-            this.numericSingularityEnginePower.Location = new System.Drawing.Point(952, 233);
+            this.numericSingularityEnginePower.Location = new System.Drawing.Point(916, 400);
             this.numericSingularityEnginePower.Maximum = new decimal(new int[] {
             999,
             0,
@@ -2176,21 +2458,23 @@
             0,
             0,
             0});
+            this.numericSingularityEnginePower.Visible = false;
             // 
             // label67
             // 
             this.label67.AutoSize = true;
             this.label67.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.label67.Location = new System.Drawing.Point(953, 114);
+            this.label67.Location = new System.Drawing.Point(917, 281);
             this.label67.Name = "label67";
             this.label67.Size = new System.Drawing.Size(40, 15);
             this.label67.TabIndex = 294;
             this.label67.Text = "Power";
+            this.label67.Visible = false;
             // 
             // numericFissionPlantPower
             // 
             this.numericFissionPlantPower.Font = new System.Drawing.Font("Consolas", 12F);
-            this.numericFissionPlantPower.Location = new System.Drawing.Point(952, 137);
+            this.numericFissionPlantPower.Location = new System.Drawing.Point(916, 304);
             this.numericFissionPlantPower.Maximum = new decimal(new int[] {
             999,
             0,
@@ -2205,12 +2489,13 @@
             0,
             0,
             0});
+            this.numericFissionPlantPower.Visible = false;
             // 
             // label60
             // 
             this.label60.AutoSize = true;
             this.label60.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.label60.Location = new System.Drawing.Point(803, 114);
+            this.label60.Location = new System.Drawing.Point(794, 114);
             this.label60.Name = "label60";
             this.label60.Size = new System.Drawing.Size(44, 15);
             this.label60.TabIndex = 290;
@@ -2220,7 +2505,7 @@
             // 
             this.label61.AutoSize = true;
             this.label61.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.label61.Location = new System.Drawing.Point(884, 114);
+            this.label61.Location = new System.Drawing.Point(875, 114);
             this.label61.Name = "label61";
             this.label61.Size = new System.Drawing.Size(45, 15);
             this.label61.TabIndex = 291;
@@ -2230,7 +2515,7 @@
             // 
             this.label62.AutoSize = true;
             this.label62.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.label62.Location = new System.Drawing.Point(850, 114);
+            this.label62.Location = new System.Drawing.Point(841, 114);
             this.label62.Name = "label62";
             this.label62.Size = new System.Drawing.Size(29, 15);
             this.label62.TabIndex = 292;
@@ -2239,7 +2524,7 @@
             // checkBoxUnlockQuantumChamber
             // 
             this.checkBoxUnlockQuantumChamber.AutoSize = true;
-            this.checkBoxUnlockQuantumChamber.Location = new System.Drawing.Point(822, 205);
+            this.checkBoxUnlockQuantumChamber.Location = new System.Drawing.Point(813, 176);
             this.checkBoxUnlockQuantumChamber.Name = "checkBoxUnlockQuantumChamber";
             this.checkBoxUnlockQuantumChamber.Size = new System.Drawing.Size(15, 14);
             this.checkBoxUnlockQuantumChamber.TabIndex = 275;
@@ -2248,7 +2533,7 @@
             // checkBoxDisableQuantumChamber
             // 
             this.checkBoxDisableQuantumChamber.AutoSize = true;
-            this.checkBoxDisableQuantumChamber.Location = new System.Drawing.Point(898, 205);
+            this.checkBoxDisableQuantumChamber.Location = new System.Drawing.Point(887, 176);
             this.checkBoxDisableQuantumChamber.Name = "checkBoxDisableQuantumChamber";
             this.checkBoxDisableQuantumChamber.Size = new System.Drawing.Size(15, 14);
             this.checkBoxDisableQuantumChamber.TabIndex = 276;
@@ -2258,7 +2543,7 @@
             // 
             this.label63.AutoSize = true;
             this.label63.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label63.Location = new System.Drawing.Point(1020, 203);
+            this.label63.Location = new System.Drawing.Point(951, 174);
             this.label63.Name = "label63";
             this.label63.Size = new System.Drawing.Size(144, 19);
             this.label63.TabIndex = 277;
@@ -2267,7 +2552,7 @@
             // checkBoxUnlockSingularityEngine
             // 
             this.checkBoxUnlockSingularityEngine.AutoSize = true;
-            this.checkBoxUnlockSingularityEngine.Location = new System.Drawing.Point(823, 237);
+            this.checkBoxUnlockSingularityEngine.Location = new System.Drawing.Point(813, 195);
             this.checkBoxUnlockSingularityEngine.Name = "checkBoxUnlockSingularityEngine";
             this.checkBoxUnlockSingularityEngine.Size = new System.Drawing.Size(15, 14);
             this.checkBoxUnlockSingularityEngine.TabIndex = 278;
@@ -2276,7 +2561,7 @@
             // checkBoxDisableSingularityEngine
             // 
             this.checkBoxDisableSingularityEngine.AutoSize = true;
-            this.checkBoxDisableSingularityEngine.Location = new System.Drawing.Point(898, 237);
+            this.checkBoxDisableSingularityEngine.Location = new System.Drawing.Point(887, 195);
             this.checkBoxDisableSingularityEngine.Name = "checkBoxDisableSingularityEngine";
             this.checkBoxDisableSingularityEngine.Size = new System.Drawing.Size(15, 14);
             this.checkBoxDisableSingularityEngine.TabIndex = 279;
@@ -2286,7 +2571,7 @@
             // 
             this.label64.AutoSize = true;
             this.label64.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label64.Location = new System.Drawing.Point(1020, 235);
+            this.label64.Location = new System.Drawing.Point(951, 193);
             this.label64.Name = "label64";
             this.label64.Size = new System.Drawing.Size(171, 19);
             this.label64.TabIndex = 280;
@@ -2296,7 +2581,7 @@
             // 
             this.label65.AutoSize = true;
             this.label65.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label65.Location = new System.Drawing.Point(1020, 139);
+            this.label65.Location = new System.Drawing.Point(949, 132);
             this.label65.Name = "label65";
             this.label65.Size = new System.Drawing.Size(126, 19);
             this.label65.TabIndex = 281;
@@ -2305,7 +2590,7 @@
             // checkBoxDisableFissionPlant
             // 
             this.checkBoxDisableFissionPlant.AutoSize = true;
-            this.checkBoxDisableFissionPlant.Location = new System.Drawing.Point(898, 141);
+            this.checkBoxDisableFissionPlant.Location = new System.Drawing.Point(887, 134);
             this.checkBoxDisableFissionPlant.Name = "checkBoxDisableFissionPlant";
             this.checkBoxDisableFissionPlant.Size = new System.Drawing.Size(15, 14);
             this.checkBoxDisableFissionPlant.TabIndex = 282;
@@ -2314,7 +2599,7 @@
             // checkBoxFreeFusionReactor
             // 
             this.checkBoxFreeFusionReactor.AutoSize = true;
-            this.checkBoxFreeFusionReactor.Location = new System.Drawing.Point(860, 176);
+            this.checkBoxFreeFusionReactor.Location = new System.Drawing.Point(849, 154);
             this.checkBoxFreeFusionReactor.Name = "checkBoxFreeFusionReactor";
             this.checkBoxFreeFusionReactor.Size = new System.Drawing.Size(15, 14);
             this.checkBoxFreeFusionReactor.TabIndex = 289;
@@ -2323,7 +2608,7 @@
             // checkBoxFreeFissionPlant
             // 
             this.checkBoxFreeFissionPlant.AutoSize = true;
-            this.checkBoxFreeFissionPlant.Location = new System.Drawing.Point(860, 141);
+            this.checkBoxFreeFissionPlant.Location = new System.Drawing.Point(849, 134);
             this.checkBoxFreeFissionPlant.Name = "checkBoxFreeFissionPlant";
             this.checkBoxFreeFissionPlant.Size = new System.Drawing.Size(15, 14);
             this.checkBoxFreeFissionPlant.TabIndex = 288;
@@ -2332,7 +2617,7 @@
             // checkBoxFreeSingularityEngine
             // 
             this.checkBoxFreeSingularityEngine.AutoSize = true;
-            this.checkBoxFreeSingularityEngine.Location = new System.Drawing.Point(861, 237);
+            this.checkBoxFreeSingularityEngine.Location = new System.Drawing.Point(849, 195);
             this.checkBoxFreeSingularityEngine.Name = "checkBoxFreeSingularityEngine";
             this.checkBoxFreeSingularityEngine.Size = new System.Drawing.Size(15, 14);
             this.checkBoxFreeSingularityEngine.TabIndex = 287;
@@ -2341,7 +2626,7 @@
             // checkBoxFreeQuantumChamber
             // 
             this.checkBoxFreeQuantumChamber.AutoSize = true;
-            this.checkBoxFreeQuantumChamber.Location = new System.Drawing.Point(860, 205);
+            this.checkBoxFreeQuantumChamber.Location = new System.Drawing.Point(849, 176);
             this.checkBoxFreeQuantumChamber.Name = "checkBoxFreeQuantumChamber";
             this.checkBoxFreeQuantumChamber.Size = new System.Drawing.Size(15, 14);
             this.checkBoxFreeQuantumChamber.TabIndex = 286;
@@ -2350,7 +2635,7 @@
             // checkBoxUnlockFusionReactor
             // 
             this.checkBoxUnlockFusionReactor.AutoSize = true;
-            this.checkBoxUnlockFusionReactor.Location = new System.Drawing.Point(822, 176);
+            this.checkBoxUnlockFusionReactor.Location = new System.Drawing.Point(813, 155);
             this.checkBoxUnlockFusionReactor.Name = "checkBoxUnlockFusionReactor";
             this.checkBoxUnlockFusionReactor.Size = new System.Drawing.Size(15, 14);
             this.checkBoxUnlockFusionReactor.TabIndex = 283;
@@ -2360,7 +2645,7 @@
             // 
             this.label66.AutoSize = true;
             this.label66.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label66.Location = new System.Drawing.Point(1020, 174);
+            this.label66.Location = new System.Drawing.Point(951, 153);
             this.label66.Name = "label66";
             this.label66.Size = new System.Drawing.Size(135, 19);
             this.label66.TabIndex = 284;
@@ -2369,7 +2654,7 @@
             // checkBoxDisableFusionReactor
             // 
             this.checkBoxDisableFusionReactor.AutoSize = true;
-            this.checkBoxDisableFusionReactor.Location = new System.Drawing.Point(898, 176);
+            this.checkBoxDisableFusionReactor.Location = new System.Drawing.Point(887, 155);
             this.checkBoxDisableFusionReactor.Name = "checkBoxDisableFusionReactor";
             this.checkBoxDisableFusionReactor.Size = new System.Drawing.Size(15, 14);
             this.checkBoxDisableFusionReactor.TabIndex = 285;
@@ -3364,6 +3649,27 @@
         private System.Windows.Forms.ComboBox comboBoxAlphaFiles;
         private System.Windows.Forms.TextBox textBoxDescription;
         private System.Windows.Forms.Button buttonLoadFromAlphaFile;
+        private System.Windows.Forms.Label label76;
+        private System.Windows.Forms.Label label82;
+        private System.Windows.Forms.Label label81;
+        private System.Windows.Forms.Label label80;
+        private System.Windows.Forms.Label label79;
+        private System.Windows.Forms.Label label78;
+        private System.Windows.Forms.Label label77;
+        private System.Windows.Forms.Label label89;
+        private System.Windows.Forms.Label label90;
+        private System.Windows.Forms.Label label91;
+        private System.Windows.Forms.Label label86;
+        private System.Windows.Forms.Label label87;
+        private System.Windows.Forms.Label label88;
+        private System.Windows.Forms.Label label83;
+        private System.Windows.Forms.Label label84;
+        private System.Windows.Forms.Label label85;
+        private System.Windows.Forms.Label label92;
+        private System.Windows.Forms.Label label96;
+        private System.Windows.Forms.Label label95;
+        private System.Windows.Forms.Label label94;
+        private System.Windows.Forms.Label label93;
     }
 }
 
