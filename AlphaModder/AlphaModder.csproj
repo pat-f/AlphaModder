@@ -52,6 +52,12 @@
     <Compile Include="Constants\AlphaModderConstants.cs" />
     <Compile Include="Constants\Sounds.cs" />
     <Compile Include="Constants\Techs.cs" />
+    <Compile Include="Dialogs\LoadFromAlphaFileDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\LoadFromAlphaFileDialog.Designer.cs">
+      <DependentUpon>LoadFromAlphaFileDialog.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +83,9 @@
     <Compile Include="Utils\DataUtils.cs" />
     <Compile Include="Utils\DialogUtils.cs" />
     <Compile Include="Utils\SystemUtils.cs" />
+    <EmbeddedResource Include="Dialogs\LoadFromAlphaFileDialog.resx">
+      <DependentUpon>LoadFromAlphaFileDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

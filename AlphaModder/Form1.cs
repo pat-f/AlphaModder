@@ -1,4 +1,5 @@
 ﻿using AlphaModder.Constants;
+using AlphaModder.Dialogs;
 using AlphaModder.Model;
 using AlphaModder.Utils;
 using Newtonsoft.Json.Linq;
@@ -1039,7 +1040,16 @@ namespace AlphaModder
 
         private void ButtonLoadFromAlphaFile_Click(object sender, EventArgs e)
         {
-            String alphaFilePresetJson = DataUtils.getJsonFromAlphaFile(false); // false - not alphax
+            LoadFromAlphaFileDialog loadFromAlphaFileDialog = new LoadFromAlphaFileDialog();
+            loadFromAlphaFileDialog.ShowDialog();
+            String selection = loadFromAlphaFileDialog.response;
+
+            String alphaFilePresetJson = "{ }";
+            
+            if(String.Equals(selection, "alpha"))
+                alphaFilePresetJson = DataUtils.getJsonFromAlphaFile(false); // false - not alphax
+            if(String.Equals(selection, "alphax"))
+                alphaFilePresetJson = DataUtils.getJsonFromAlphaFile(true); // true - alphax
             loadPresetToControls(alphaFilePresetJson);
         }
     }
