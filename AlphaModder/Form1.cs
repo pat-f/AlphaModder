@@ -954,9 +954,14 @@ namespace AlphaModder
             return "";
         }
 
-        // takes preset name or raw json
+        // takes preset name or raw json string
         private void loadPresetToControls(String preset)
         {
+            // disable sounds so they don't play when the controls' values change
+            // sound setting will be restored after 
+            bool tempSoundSetting = SystemUtils.getSoundOption();
+            SystemUtils.setSoundOption(false);
+
             String jsonString = "";
             JObject jsonObject;
             Console.WriteLine(preset);
@@ -978,6 +983,8 @@ namespace AlphaModder
                     }
                 }
             }
+            // restore sound setting
+            SystemUtils.setSoundOption(tempSoundSetting);
         }
 
         // parse the String value from the json to the appropriate type for the control

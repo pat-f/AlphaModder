@@ -96,6 +96,18 @@ namespace AlphaModder.Utils
 
         }
 
+        public static bool getSoundOption()
+        {
+            return Properties.Settings.Default.EnableSounds;
+        }
+
+        // set the sound option and save
+        public static void setSoundOption(bool soundEnabled)
+        {
+            Properties.Settings.Default.EnableSounds = soundEnabled;
+            Properties.Settings.Default.Save();
+        }
+
         // play the specified sound
         public static void playSound(String relativePath)
         {

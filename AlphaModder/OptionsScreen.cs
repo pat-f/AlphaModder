@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AlphaModder.Utils;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,12 +21,13 @@ namespace AlphaModder
         // when user clicks ok, set the sound option based on the check box, and close the window
         private void ButtonOk_Click(object sender, EventArgs e)
         {
-            if (checkBoxEnableSounds.Checked)
-                Properties.Settings.Default.EnableSounds = true;
-            else
-                Properties.Settings.Default.EnableSounds = false;
+            SystemUtils.setSoundOption(checkBoxEnableSounds.Checked);
+            //if (checkBoxEnableSounds.Checked)
+            //    Properties.Settings.Default.EnableSounds = true;
+            //else
+            //    Properties.Settings.Default.EnableSounds = false;
 
-            Properties.Settings.Default.Save();
+            //Properties.Settings.Default.Save();
 
             this.Close();
         }
