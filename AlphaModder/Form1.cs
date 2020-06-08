@@ -1016,9 +1016,28 @@ namespace AlphaModder
         private void ButtonLoadPreset_Click(object sender, EventArgs e)
         {
             loadPresetToControls(comboBoxPresets.Text);
+            refreshDescriptions();
             refreshPresetsDropdown();
         }
 
+        // update the description labels for the trackbars in the General tab
+        // called when the form is loaded from a preset
+        // this is needed because the text is updated when the Scroll event
+        // is raised for a TrackBar, which doesn't happen when the values
+        // are set directly, like when they're loaded from a preset
+        private void refreshDescriptions()
+        {
+            TrackBarTerraformingRate_Scroll(null, null);
+            TrackBarDroneRiots_Scroll(null, null);
+            TrackBarNativeLife_Scroll(null, null);
+            TrackBarFungus_Scroll(null, null);
+            TrackBarPopulationLimits_Scroll(null, null);
+            TrackBarHugePlanetSize_Scroll(null, null);
+            TrackBarTechDiscoveryRate_Scroll(null, null);
+        }
+
+        // this is called when a preset is saved
+        // so the presets dropdown will accurately represent what's on the filesystem
         private void refreshPresetsDropdown()
         {
             comboBoxPresets.Items.Clear();
