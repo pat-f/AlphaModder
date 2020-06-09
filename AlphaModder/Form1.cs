@@ -1007,6 +1007,7 @@ namespace AlphaModder
 
         private void ButtonSavePreset_Click(object sender, EventArgs e)
         {
+            if (String.IsNullOrEmpty(comboBoxPresets.Text)) return; // do nothing if the preset name is blank
             String selectedPresetName = comboBoxPresets.Text;
             String presetJson = buildPresetJson(selectedPresetName, false); // false - no semicolons
             DataUtils.savePresetJsonFile(presetJson, selectedPresetName);
@@ -1015,6 +1016,7 @@ namespace AlphaModder
 
         private void ButtonLoadPreset_Click(object sender, EventArgs e)
         {
+            if (String.IsNullOrEmpty(comboBoxPresets.Text)) return; // do nothing if the preset name is blank
             loadPresetToControls(comboBoxPresets.Text);
             refreshDescriptions();
             refreshPresetsDropdown();
@@ -1077,6 +1079,26 @@ namespace AlphaModder
             if(String.Equals(selection, "alphax"))
                 alphaFilePresetJson = DataUtils.getJsonFromAlphaFile(true); // true - alphax
             loadPresetToControls(alphaFilePresetJson);
+        }
+
+        private void ButtonDeletePreset_Click(object sender, EventArgs e)
+        {
+            String presetName = comboBoxPresets.Text;
+            if(DialogUtils.messageBoxOkCancel("Are you sure you want to delete the preset \"" + comboBoxPresets.Text + "\"?", MessageBoxType.ALERT))
+            {
+                if (DataUtils.deletePreset(presetName))
+                {
+                    DialogUtils.messageBox("Preset deleted:\n\n" + presetName);
+                }
+                else
+                {
+                    DialogUtils.messageBox("There was a problem deleting the preset: \n\n" + presetName);
+                }
+
+                
+                refreshPresetsDropdown();
+                comboBoxPresets.Text = "";
+            }
         }
     }
 }

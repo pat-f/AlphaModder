@@ -3280,6 +3280,7 @@
             this.buttonDeletePreset.TabIndex = 228;
             this.buttonDeletePreset.Text = "Delete Preset";
             this.buttonDeletePreset.UseVisualStyleBackColor = true;
+            this.buttonDeletePreset.Click += new System.EventHandler(this.ButtonDeletePreset_Click);
             // 
             // label74
             // 

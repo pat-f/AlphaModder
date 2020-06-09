@@ -226,6 +226,18 @@ namespace AlphaModder.Utils
             return jsonStr;
         }
 
+        internal static bool deletePreset(string text)
+        {
+            try
+            {
+                File.Delete(getPresetAbsolutePath(text));
+                return true;
+            } catch(Exception e)
+            {
+                return false;
+            }
+        }
+
         private static string getDefaultPresetJsonStr()
         {
             return @"{
