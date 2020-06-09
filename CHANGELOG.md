@@ -9,10 +9,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Sounds utility functions
 - Sounds for various actions
 - Options screen with option to enable sounds
+- Save, load, and delete presets using json files
+- Restore defaults button
+- Load preset from alpha.txt or alphax.txt
+- Delete preset
 ### Fixed
-- Fixed slow window resizing
+- Slow window resizing
 - Sounds playing when preset is loaded
 - Description text not updating when preset is loaded
+- Presets can be saved and loaded with no name
+### Changed
+- Redesigned General tab
+- General refactoring
+- Some UI updates
 
 ## [1.0.0] - 2020-05-28
 ### Added
