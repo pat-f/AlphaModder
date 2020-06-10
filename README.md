@@ -17,7 +17,7 @@ Please review the [Issues](https://github.com/pat-f/AlphaModder/issues) and [Mil
 
 ## Download and run the application:
 * Go to the [Releases](https://github.com/pat-f/AlphaModder/releases) page and download the .exe file for the latest version.  On first run, Windows might warn you that the executable is from an unknown publisher.  Click proceed to allow the application to run.
-* The app will automatically find your game installation folder if it's installed in a common path on a common drive letter.  It can be set manually, but the first place that will be checked is the current directory, so put the app in the game's installation folder if it's not found automatically.
+* The app will automatically find your game installation folder if it's installed in a common directory.  It can be set manually, but the first place that will be checked is the current directory, so put the app in the game's installation folder if it's not found automatically.
 * The app will overwrite your alpha.txt and alphax.txt files when you click Apply.  Your new file will have all the options you selected in the app.
 
 ## Editing the application source:

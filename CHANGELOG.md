@@ -18,6 +18,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Sounds playing when preset is loaded
 - Description text not updating when preset is loaded
 - Presets can be saved and loaded with no name
+- Added Costura.Fody package so DLLs for json library are included in exe
 ### Changed
 - Redesigned General tab
 - General refactoring
