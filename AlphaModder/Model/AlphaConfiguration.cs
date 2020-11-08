@@ -17,12 +17,14 @@ namespace AlphaModder.Model
 
         #region RULES
 
-        public String ruleTechDiscoveryRate = "100";// { get; set; } TODO fix this
+        public String ruleTechDiscoveryRate { get; set; } = "100";// { get; set; } TODO fix this?
         public String ruleDronesInducedByGenejackFactory { get; set; } = "1";
 
         public String startingEnergy { get; set; } = "10";
         public String minTurnsBetweenCouncils { get; set; } = "20";
-        public String rulePrototypeExtraCostPct { get; set; } = "50";
+        public String rulePrototypeExtraCostPctLand { get; set; } = "50";
+        public String rulePrototypeExtraCostPctSea { get; set; } = "50";
+        public String rulePrototypeExtraCostPctAir { get; set; } = "50";
         public String ruleRetoolPenaltyPct { get; set; } = "50";
         public String rulePopLimitWithoutHabComplex { get; set; } = "7";
         public String rulePopLimitWithoutHabDome { get; set; } = "14";
@@ -191,9 +193,9 @@ namespace AlphaModder.Model
 
         public String getRulePrototypeCostPctLineStr()
         {
-            return rulePrototypeExtraCostPct + ",      ; Extra percentage cost of prototype LAND unit\n"
-                + rulePrototypeExtraCostPct + ",      ; Extra percentage cost of prototype SEA unit\n"
-                + rulePrototypeExtraCostPct + ",      ; Extra percentage cost of prototype AIR unit";
+            return rulePrototypeExtraCostPctLand + ",      ; Extra percentage cost of prototype LAND unit\n"
+                + rulePrototypeExtraCostPctSea + ",      ; Extra percentage cost of prototype SEA unit\n"
+                + rulePrototypeExtraCostPctAir + ",      ; Extra percentage cost of prototype AIR unit";
         }
 
         public String getHeavyTransportSpecAbilityLineStr()

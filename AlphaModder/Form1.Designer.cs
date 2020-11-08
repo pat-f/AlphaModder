@@ -308,6 +308,14 @@
             this.comboBoxAlphaFiles = new System.Windows.Forms.ComboBox();
             this.textBoxDescription = new System.Windows.Forms.TextBox();
             this.buttonLoadFromAlphaFile = new System.Windows.Forms.Button();
+            this.label97 = new System.Windows.Forms.Label();
+            this.numProtCostLand = new System.Windows.Forms.NumericUpDown();
+            this.label98 = new System.Windows.Forms.Label();
+            this.label99 = new System.Windows.Forms.Label();
+            this.numProtCostSea = new System.Windows.Forms.NumericUpDown();
+            this.label100 = new System.Windows.Forms.Label();
+            this.numProtCostAir = new System.Windows.Forms.NumericUpDown();
+            this.label101 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarTerraformingRate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarDroneRiots)).BeginInit();
@@ -326,6 +334,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericSingularityEnginePower)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericFissionPlantPower)).BeginInit();
             this.tabPageFacilities.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numProtCostLand)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numProtCostSea)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numProtCostAir)).BeginInit();
             this.SuspendLayout();
             // 
             // checkBoxDisableProbeTeams
@@ -2196,6 +2207,14 @@
             // tabPageUnits
             // 
             this.tabPageUnits.AutoScroll = true;
+            this.tabPageUnits.Controls.Add(this.label101);
+            this.tabPageUnits.Controls.Add(this.label100);
+            this.tabPageUnits.Controls.Add(this.numProtCostAir);
+            this.tabPageUnits.Controls.Add(this.label99);
+            this.tabPageUnits.Controls.Add(this.numProtCostSea);
+            this.tabPageUnits.Controls.Add(this.label98);
+            this.tabPageUnits.Controls.Add(this.label97);
+            this.tabPageUnits.Controls.Add(this.numProtCostLand);
             this.tabPageUnits.Controls.Add(this.label71);
             this.tabPageUnits.Controls.Add(this.checkBoxEnableHeavyTransport);
             this.tabPageUnits.Controls.Add(this.label70);
@@ -2403,7 +2422,7 @@
             // numericFusionReactorPower
             // 
             this.numericFusionReactorPower.Font = new System.Drawing.Font("Consolas", 12F);
-            this.numericFusionReactorPower.Location = new System.Drawing.Point(916, 336);
+            this.numericFusionReactorPower.Location = new System.Drawing.Point(1126, 81);
             this.numericFusionReactorPower.Maximum = new decimal(new int[] {
             999,
             0,
@@ -2423,7 +2442,7 @@
             // numericQuantumChamberPower
             // 
             this.numericQuantumChamberPower.Font = new System.Drawing.Font("Consolas", 12F);
-            this.numericQuantumChamberPower.Location = new System.Drawing.Point(916, 368);
+            this.numericQuantumChamberPower.Location = new System.Drawing.Point(1126, 113);
             this.numericQuantumChamberPower.Maximum = new decimal(new int[] {
             999,
             0,
@@ -2443,7 +2462,7 @@
             // numericSingularityEnginePower
             // 
             this.numericSingularityEnginePower.Font = new System.Drawing.Font("Consolas", 12F);
-            this.numericSingularityEnginePower.Location = new System.Drawing.Point(916, 400);
+            this.numericSingularityEnginePower.Location = new System.Drawing.Point(1126, 145);
             this.numericSingularityEnginePower.Maximum = new decimal(new int[] {
             999,
             0,
@@ -2464,7 +2483,7 @@
             // 
             this.label67.AutoSize = true;
             this.label67.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.label67.Location = new System.Drawing.Point(917, 281);
+            this.label67.Location = new System.Drawing.Point(1127, 26);
             this.label67.Name = "label67";
             this.label67.Size = new System.Drawing.Size(40, 15);
             this.label67.TabIndex = 294;
@@ -2474,7 +2493,7 @@
             // numericFissionPlantPower
             // 
             this.numericFissionPlantPower.Font = new System.Drawing.Font("Consolas", 12F);
-            this.numericFissionPlantPower.Location = new System.Drawing.Point(916, 304);
+            this.numericFissionPlantPower.Location = new System.Drawing.Point(1126, 49);
             this.numericFissionPlantPower.Maximum = new decimal(new int[] {
             999,
             0,
@@ -3334,6 +3353,113 @@
             this.buttonLoadFromAlphaFile.UseVisualStyleBackColor = true;
             this.buttonLoadFromAlphaFile.Click += new System.EventHandler(this.ButtonLoadFromAlphaFile_Click);
             // 
+            // label97
+            // 
+            this.label97.AutoSize = true;
+            this.label97.Font = new System.Drawing.Font("Consolas", 12F);
+            this.label97.Location = new System.Drawing.Point(945, 285);
+            this.label97.Name = "label97";
+            this.label97.Size = new System.Drawing.Size(99, 19);
+            this.label97.TabIndex = 305;
+            this.label97.Text = "Land Units";
+            // 
+            // numProtCostLand
+            // 
+            this.numProtCostLand.Font = new System.Drawing.Font("Consolas", 12F);
+            this.numProtCostLand.Location = new System.Drawing.Point(867, 285);
+            this.numProtCostLand.Maximum = new decimal(new int[] {
+            9999,
+            0,
+            0,
+            0});
+            this.numProtCostLand.Name = "numProtCostLand";
+            this.numProtCostLand.Size = new System.Drawing.Size(63, 26);
+            this.numProtCostLand.TabIndex = 304;
+            this.numProtCostLand.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.numProtCostLand.Value = new decimal(new int[] {
+            50,
+            0,
+            0,
+            0});
+            // 
+            // label98
+            // 
+            this.label98.AutoSize = true;
+            this.label98.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label98.Location = new System.Drawing.Point(863, 250);
+            this.label98.Name = "label98";
+            this.label98.Size = new System.Drawing.Size(191, 20);
+            this.label98.TabIndex = 306;
+            this.label98.Text = "Prototype Additional Cost";
+            // 
+            // label99
+            // 
+            this.label99.AutoSize = true;
+            this.label99.Font = new System.Drawing.Font("Consolas", 12F);
+            this.label99.Location = new System.Drawing.Point(945, 319);
+            this.label99.Name = "label99";
+            this.label99.Size = new System.Drawing.Size(90, 19);
+            this.label99.TabIndex = 308;
+            this.label99.Text = "Sea Units";
+            // 
+            // numProtCostSea
+            // 
+            this.numProtCostSea.Font = new System.Drawing.Font("Consolas", 12F);
+            this.numProtCostSea.Location = new System.Drawing.Point(867, 317);
+            this.numProtCostSea.Maximum = new decimal(new int[] {
+            9999,
+            0,
+            0,
+            0});
+            this.numProtCostSea.Name = "numProtCostSea";
+            this.numProtCostSea.Size = new System.Drawing.Size(63, 26);
+            this.numProtCostSea.TabIndex = 307;
+            this.numProtCostSea.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.numProtCostSea.Value = new decimal(new int[] {
+            50,
+            0,
+            0,
+            0});
+            // 
+            // label100
+            // 
+            this.label100.AutoSize = true;
+            this.label100.Font = new System.Drawing.Font("Consolas", 12F);
+            this.label100.Location = new System.Drawing.Point(945, 351);
+            this.label100.Name = "label100";
+            this.label100.Size = new System.Drawing.Size(90, 19);
+            this.label100.TabIndex = 310;
+            this.label100.Text = "Air Units";
+            // 
+            // numProtCostAir
+            // 
+            this.numProtCostAir.Font = new System.Drawing.Font("Consolas", 12F);
+            this.numProtCostAir.Location = new System.Drawing.Point(867, 349);
+            this.numProtCostAir.Maximum = new decimal(new int[] {
+            9999,
+            0,
+            0,
+            0});
+            this.numProtCostAir.Name = "numProtCostAir";
+            this.numProtCostAir.Size = new System.Drawing.Size(63, 26);
+            this.numProtCostAir.TabIndex = 309;
+            this.numProtCostAir.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.numProtCostAir.Value = new decimal(new int[] {
+            50,
+            0,
+            0,
+            0});
+            // 
+            // label101
+            // 
+            this.label101.AutoSize = true;
+            this.label101.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label101.Location = new System.Drawing.Point(1060, 251);
+            this.label101.Name = "label101";
+            this.label101.Size = new System.Drawing.Size(135, 19);
+            this.label101.TabIndex = 311;
+            this.label101.Text = "(Standard: 50)";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -3384,6 +3510,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericFissionPlantPower)).EndInit();
             this.tabPageFacilities.ResumeLayout(false);
             this.tabPageFacilities.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numProtCostLand)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numProtCostSea)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numProtCostAir)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -3671,6 +3800,14 @@
         private System.Windows.Forms.Label label95;
         private System.Windows.Forms.Label label94;
         private System.Windows.Forms.Label label93;
+        private System.Windows.Forms.Label label100;
+        private System.Windows.Forms.NumericUpDown numProtCostAir;
+        private System.Windows.Forms.Label label99;
+        private System.Windows.Forms.NumericUpDown numProtCostSea;
+        private System.Windows.Forms.Label label98;
+        private System.Windows.Forms.Label label97;
+        private System.Windows.Forms.NumericUpDown numProtCostLand;
+        private System.Windows.Forms.Label label101;
     }
 }
 

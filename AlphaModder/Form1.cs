@@ -707,6 +707,12 @@ namespace AlphaModder
 
             #endregion
 
+            #region Prototypes Tab
+            alphaConfiguration.rulePrototypeExtraCostPctLand = numProtCostLand.Value.ToString();
+            alphaConfiguration.rulePrototypeExtraCostPctSea = numProtCostSea.Value.ToString();
+            alphaConfiguration.rulePrototypeExtraCostPctAir = numProtCostAir.Value.ToString();
+            #endregion
+
             return alphaConfiguration;
         }
 
